@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'ASTRON Apertif DR1'
+copyright = '2021, CHG'
+author = 'C Herbe-George'
 
 release = '0.1'
 version = '0.1.0'
