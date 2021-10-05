@@ -1,9 +1,8 @@
-Template for the Read the Docs tutorial
+Template for Data Releases using the template for the Read the Docs tutorial
 =======================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+This GitHub template uses DR1 from Apertif as an initial example.
 
-Read the tutorial here:
 
+For an initial understanding of how it works read the tutorial here:
 https://docs.readthedocs.io/en/stable/tutorial/
