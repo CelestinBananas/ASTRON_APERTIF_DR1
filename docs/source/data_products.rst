@@ -100,7 +100,7 @@ Since we had to match sources in Apertif and NVSS for the source comparison we a
   Figure 3. Position difference between the sources in the NVSS catalogue and the sources detected in the mosaic of ObsID 200102012.
 
 Polarization
-============
+#############
 
 Validation of polarisation cubes/images
 ***************************************
@@ -154,7 +154,7 @@ The table of released polarisation beams includes the following columns that des
 * Unoise_frac: Fraction of U image planes failing criterium 2. [0.0-1.0]
 
 HI
-###
+####
 Cube Validation
 ***************
 The quality of the HI line data was validated in multiple steps. We concentrate the analysis on cubes 0, 1, and 2 (see Table 2 in the "Available data products" document for the frequency ranges of the cubes), as the quality of cube 3 always followed that of cube 2 due to both of them being in adjacent low-RFI frequency ranges.
