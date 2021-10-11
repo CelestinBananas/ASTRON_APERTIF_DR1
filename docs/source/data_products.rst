@@ -52,3 +52,7 @@ The overall consistency is very good with a mean of 1.014 and an rms of 4% . If 
   200106010,  1.0000
 
 An example of two observations (ObsID 200106010 and 190909049, observed at 06.01.2020 and 09.09.2019 respectively) compared to one another is shown in Figure 1. Plotted is the relative difference in flux versus the flux in the 06.01.2020 observation.
+
+.. image:: images/flux_cmp_1.png
+  :width: 400
+  :alt: Relative flux error
