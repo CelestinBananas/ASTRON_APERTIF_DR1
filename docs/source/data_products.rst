@@ -54,6 +54,7 @@ The overall consistency is very good with a mean of 1.014 and an rms of 4% . If 
 An example of two observations (ObsID 200106010 and 190909049, observed at 06.01.2020 and 09.09.2019 respectively) compared to one another is shown in Figure 1. Plotted is the relative difference in flux versus the flux in the 06.01.2020 observation.
 
 .. figure:: images/flux_cmp_1.png
+  :align: center
   :width: 400
   :alt: Relative flux error
 
@@ -79,22 +80,22 @@ Table 2 captures the comparison of the individual mosaics with the NVSS. For eac
   200104011, 0.976
   200106010, 0.964
 
-.. A flux scale comparison using the beam shapes determined from a direct comparison of the DR1 observations with NVSS using a Gaussian process regression technique provides a better picture as all DR1 data are used rather than just one field.
-..
-.. .. image:: images/flux_cmp_2.png
-..   :align: center
-..   :width: 400
-..   :alt: Relative flux error
-..
-..   Figure 2. Relative flux difference of sources in the NVSS catalogue and sources measured in an aperitif mosaic of ObsID 200102012 as a function of the flux of the sources in the NVSS catalogue
-..
-.. This is described in "Characterization of the primary beams" and yields a current estimate of the flux scale of Apertif as compared to NVSS. From this comparison the Apertif fluxes are on average 9% higher than those of NVSS, accounting for a nominal spectral index of the sources of -0.7.
-..
-.. Since we had to match sources in Apertif and NVSS for the source comparison we also obtained information on the agreement between the Apertif and NVSS astrometry. Figure 3 shows the positional differences for sources in the mosaic of ObsID 200102012 and the NVSS catalogue. The agreement is very good with mean offsets of 0.05 +/- 0.2  arcsec in RA and -0.05 +/- 0.2  arcsec in Dec.
-..
-.. .. image:: images/flux_cmp_3.png
-..   :align: center
-..   :width: 400
-..   :alt: Relative flux error
-..
-..   Figure 3. Position difference between the sources in the NVSS catalogue and the sources detected in the mosaic of ObsID 200102012.
+A flux scale comparison using the beam shapes determined from a direct comparison of the DR1 observations with NVSS using a Gaussian process regression technique provides a better picture as all DR1 data are used rather than just one field.
+
+.. figure:: images/flux_cmp_2.png
+  :align: center
+  :width: 400
+  :alt: Relative flux error
+
+  Figure 2. Relative flux difference of sources in the NVSS catalogue and sources measured in an aperitif mosaic of ObsID 200102012 as a function of the flux of the sources in the NVSS catalogue
+
+This is described in "Characterization of the primary beams" and yields a current estimate of the flux scale of Apertif as compared to NVSS. From this comparison the Apertif fluxes are on average 9% higher than those of NVSS, accounting for a nominal spectral index of the sources of -0.7.
+
+Since we had to match sources in Apertif and NVSS for the source comparison we also obtained information on the agreement between the Apertif and NVSS astrometry. Figure 3 shows the positional differences for sources in the mosaic of ObsID 200102012 and the NVSS catalogue. The agreement is very good with mean offsets of 0.05 +/- 0.2  arcsec in RA and -0.05 +/- 0.2  arcsec in Dec.
+
+.. figure:: images/flux_cmp_3.png
+  :align: center
+  :width: 400
+  :alt: Relative flux error
+
+  Figure 3. Position difference between the sources in the NVSS catalogue and the sources detected in the mosaic of ObsID 200102012.
