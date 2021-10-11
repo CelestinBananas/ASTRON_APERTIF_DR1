@@ -68,16 +68,17 @@ Table 2 captures the comparison of the individual mosaics with the NVSS. For eac
   :header: "ObsID", "Median Flux Ratio"
   :widths: 20, 20
 
-  190919049, 	0.943
-  191207035, 	0.894
-  191223022, 	0.962
-  191225015, 	0.969
-  191227014, 	1.083
-  191229014, 	0.980
-  191231013, 	0.974
-  200102012, 	1.004
-  200104011, 	0.976
-  200106010, 	0.964
+  190919049, 0.943
+  191207035, 0.894
+  191223022, 0.962
+  191225015, 0.969
+  191227014, 1.083
+  191229014, 0.980
+  191231013, 0.974
+  200102012, 1.004
+  200104011, 0.976
+  200106010, 0.964
+
 A flux scale comparison using the beam shapes determined from a direct comparison of the DR1 observations with NVSS using a Gaussian process regression technique provides a better picture as all DR1 data are used rather than just one field.
 
 .. image:: images/flux_cmp_2.png
