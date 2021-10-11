@@ -92,9 +92,9 @@ This is described in "Characterization of the primary beams" and yields a curren
 
 Since we had to match sources in Apertif and NVSS for the source comparison we also obtained information on the agreement between the Apertif and NVSS astrometry. Figure 3 shows the positional differences for sources in the mosaic of ObsID 200102012 and the NVSS catalogue. The agreement is very good with mean offsets of 0.05 +/- 0.2  arcsec in RA and -0.05 +/- 0.2  arcsec in Dec.
 
-  .. image:: images/flux_cmp_3.png
-    :align: center
-    :width: 400
-    :alt: Relative flux error
+.. image:: images/flux_cmp_3.png
+  :align: center
+  :width: 400
+  :alt: Relative flux error
 
-    Figure 3. Position difference between the sources in the NVSS catalogue and the sources detected in the mosaic of ObsID 200102012.
+  Figure 3. Position difference between the sources in the NVSS catalogue and the sources detected in the mosaic of ObsID 200102012.
