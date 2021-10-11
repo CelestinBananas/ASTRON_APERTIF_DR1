@@ -35,9 +35,8 @@ For checking the consistency of the flux scale two beams of an observation of a 
 
 The overall consistency is very good with a mean of 1.014 and an rms of 4% . If one excludes the two most discrepant observations (ObsID 191207035 and 191227014) the rms decreases to 2%. Table 1 provides the flux ratio of 10 observations relative to the last observation made on 06.01.2020 (ObsID 200106010)
 
-.. csv-table::
+.. csv-table:: Table 1
   :align: center
-  Table 1
   :header: "ObsID", "Median Flux Ratio"
   :widths: 20, 20
 
@@ -51,3 +50,5 @@ The overall consistency is very good with a mean of 1.014 and an rms of 4% . If 
   200102012,  1.0446
   200104011,  1.0222
   200106010,  1.0000
+
+An example of two observations (ObsID 200106010 and 190909049, observed at 06.01.2020 and 09.09.2019 respectively) compared to one another is shown in Figure 1. Plotted is the relative difference in flux versus the flux in the 06.01.2020 observation.
