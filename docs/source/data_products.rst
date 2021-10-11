@@ -29,3 +29,23 @@ Two additional criteria were set based on survey specifications:
 * σin or σout  > 60 microJy/beam. In this case the noise of the image does not meet the  minimum requirement to be considered survey quality and valid.
 * The minor axis of the restoring beam is > 15 arcsec. This occurs when both dishes RTC and RTD are missing from an observation. In this case, the required angular resolution of the survey is not met.
 
+Flux scale & astrometry 
+#######################
+For checking the consistency of the flux scale two beams of an observation of a field in the Perseus-Pisces region centered on RA(J2000) = 01h55m and Dec(J2000) = 33d56’ which was observed ten times between September 2019 and January 2020 were examined. The automatic source finder PyBDSF (also used in the Apercal pipeline) was used to find and determine source fluxes, positions and sizes and compared these from observation to observation. We restricted the comparison to sources that are less than 35” in size and have fluxes above 3 mJy (100 times the typical rms noise)  and agree in position to within 3 arcsecs to ensure that the sources used for comparison are indeed identical and have been included in the clean masks. 
+
+The overall consistency is very good with a mean of 1.014 and an rms of 4% . If one excludes the two most discrepant observations (ObsID 191207035 and 191227014) the rms decreases to 2%. Table 1 provides the flux ratio of 10 observations relative to the last observation made on 06.01.2020 (ObsID 200106010) 
+
+.. csv-table:: Table 1
+   :header: "ObsID", "Median Flux Ratio"
+   :widths: 20, 20
+
+    190919049, 0.9982
+    191207035, 0.9311
+    191223022,  1.0041
+    191225015,  1.0116
+    191227014,  1.1069
+    191229014,  1.0185
+    191231013,  1.0062
+    200102012,  1.0446
+    200104011,  1.0222
+    200106010,  1.0000
