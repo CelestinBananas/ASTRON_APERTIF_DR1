@@ -194,6 +194,45 @@ The upper limit of -4.52 of the second condition is not a hard limit and a sligh
 Cubes not obeying any of these two sets of criteria were considered “bad”.
 Using these conditions we defined for all cubes 0, 1 and 2 a subset of good and OK cubes. Cube 3 in all cases follows the quality designation of cube 2.
 
-Figure 2 shows the noise histograms and a representative channel map and position velocity slice for each of the three quality categories.
+Figure 5 shows the noise histograms and a representative channel map and position velocity slice for each of the three quality categories.
 
 Whether a cube is part of the data release is determined by the quality criteria of the corresponding continuum image. This is described in more detail in the document “Released processed data products”. The quality of each cube and the metrics used to determine that quality are included in the VO table describing the released HI observations (see "User interfaces").
+
+.. figure:: images/cube2_points_paper.png
+  :align: center
+  :width: 400
+  :alt: Relative flux error
+
+  Figure 4. Distribution of cubes 2 of all beams in the fex-p0.8 plane (grey points). Overplotted are quality assessments of the beams of 14 observations. Good cubes are indicated by green points, OK by orange points and bad cubes by red points. The blue lines indicate the regions where cubes are considered good (left region) or OK (right region).
+
+.. figure:: images/qa_overview.png
+  :align: center
+  :width: 400
+  :alt: Relative flux error
+
+  Figure 5. Examples of the three quality classes used for the HI quality assessment. The top row shows an example of a "good" observation (Obsid 200202012, beam 17, cube 2), the middle one an "OK" observation (Obsid 200202012, beam 33, cube 2) and the bottom one a "bad" observation (Obsid 200202012, beam 20, cube 2). The columns show, from left to right, the noise histogram, an extract of the central velocity channel, and a position-velocity diagram through the center of the cube. In the plots in the left column the short horizontal line at the top indicates the rms. The two dotted vertical lines indicate the ±6.75 x rms values. The "good" observation in the top row shows hardly any artefacts and a Gaussian noise histogram. The "OK" observation in the middle row shows a minor continuum subtraction artefact (which in turn causes somewhat extended wings to the noise histogram). The "bad" observation in the bottom row shows major continuum subtraction artefacts, resulting in a very non-Gaussian histogram.
+
+External comparison
+********************
+
+In order to further validate the line cubes, we performed preliminary source finding and cleaning of a subset of cubes using SoFiA-2 (Source Finding Application; Serra et al. 2015, https://github.com/SoFiA-Admin/SoFiA-2). Full details of this procedure are supplied in Hess et al. (in prep).
+
+Comparison to ALFALFA
+----------------------
+We compared the properties of HI detections in Apertif with the properties of HI detections in the ALFALFA catalogue (Haynes et al. 2018). We created a source catalogue with SoFiA and cross matched the detected sources with the ALFALFA catalogue. In 21 fields that overlap in the footprint of both surveys, we found 479 matching sources. Out of these, 336 sources were found in data cubes with "good" quality, 39 in data cubes with "OK" quality and 104 were found in "bad" quality data cubes. The results of the comparison are shown in figures 6 and 7. The color coding of these figures reflects the quality of the data cube in which the sources were identified with blue for "good", green for "OK" and orange for "bad".
+
+Overall the properties of the Apertif detections agree well with the ALFALFA detections. There are some sources that have smaller line widths (w20) than the ALFALFA sources. This is likely connected to the flagging of 3 channels out of every 64 because of the strong dropoff in response (See “Aliasing” in “System notes”). Cubes 0, 1, and 2 have every three channels averaged together. Combined with the flagging of three channels out of every 64, this means that every 22nd channel in these cubes has no signal, and there are channels with ⅓ nominal sensitivity (periodicity of 42 and 21 channels) and ⅔ nominal sensitivity (periodicity of 63 channels). These flagged or partially flagged channels can result in a source being spectrally separated into two different detections. This then also results in smaller line widths for these sources. Another reason for the smaller line widths in Apertif can be extended emission detected in ALFALFA that gets filtered out by the interferometry.
+
+.. figure:: images/compairson_v4_val.png
+  :align: center
+  :width: 400
+  :alt: Relative flux error
+
+  Figure 6. Comparing the properties of overlapping Apertif and ALFALFA sources. First panel\: systemic velocity, second panel\: W20 line width, third panel\: integrated flux. The different colored markers represent sources detected in “good” (G), “OK” (O), and “bad” (B) quality HI data cubes.
+
+.. figure:: images/histograms_with_val.png
+  :align: center
+  :width: 400
+  :alt: Relative flux error
+
+  Figure 7. Distribution of the difference in systemic velocity, W20 and integrated flux between Apertif and ALFALFA detections. The colors represent detections in “good” (G), “OK” (O), and “bad” (B) quality HI data cubes.
