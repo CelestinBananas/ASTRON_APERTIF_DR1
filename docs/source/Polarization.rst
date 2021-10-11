@@ -1,5 +1,5 @@
 Polarization
-##############
+============
 
 Validation of polarisation cubes/images
 ***************************************
