@@ -95,7 +95,7 @@ Time variability
 
 Beam weights are measured at the start of every imaging observing run and are typically used for 2 weeks in a row. The beam weights define the shape of the compound beams. They depend on the quality of the beam weight measurement, (e.g. RFI at the time of the measurement) and also on the health of the system (e.g. broken elements on the PAFs, dysfunctional antennas). Drift scans are typically measured once per month due to the time intensive nature of the measurement. The beam models derived from drift scans observed at different times typically vary by a few percent (rms of the difference).
 
-.. figure:: images/190912-190821_histogram-1024x850
+.. figure:: images/190912-190821_histogram-1024x850.png
   :align: center
   :width: 400
   :alt: Relative flux error
@@ -107,7 +107,7 @@ Beam size change with frequency
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Beam shapes and sizes change across the field of view of Apertif with the central beams being more symmetric and the beams along the edge of the field of view more elongated. :numref:`chann_9` and :numref:`chann_7` show the average beam size (FWHM), and the FWHM along the x and y axis as a function of beam number. :numref:`chann_9` shows the beam size for frequency bin 7 (1.363 GHz) and :numref:`chann_7` shows the same for frequency bin 9 (1.399 GHz).
 
-.. figure:: images/190912_chann_9_FWHM-1024x706
+.. figure:: images/190912_chann_9_FWHM-1024x706.png
   :align: center
   :width: 400
   :alt: Relative flux error
