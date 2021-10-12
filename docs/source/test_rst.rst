@@ -128,11 +128,6 @@ also applied to figure `1 <#fig:logmass>`__.
    :alt:
    :name: fig:logmass
 
-.. figure:: images/M_L.pdf
-   :alt:
-
-[fig:M_L]
-
 Observational data and SFR
 --------------------------
 
