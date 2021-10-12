@@ -55,9 +55,9 @@ In the column Related products another link connects to a page containing a list
   :alt: Relative flux error
   :name: rel_prod
 
-   Links of ancillary data products related to the target of interest. Click for a bigger image
+  Links of ancillary data products related to the target of interest. Click for a bigger image
 
- The columns shown in Figure 3 are the most informative for the astronomers (e.g. position, observing frequency, observing date, quality assessment, format etc), please note that more columns are available but not displayed here. The complete set of columns can be visualized via topcat as described below or using More output fields selection button in the search query. Querying the released data is also possible using e.g. TOPCAT using TAP. Via the TAP protocol, it is possible to query the registry in a more flexible way using an enriched SQL syntax called ADQL. An example is given in :numref:`ADQL_query`: click the link indicated with the red ellipse on the left panel Try ADQL and place your ADQL query on the query form.
+The columns shown in Figure 3 are the most informative for the astronomers (e.g. position, observing frequency, observing date, quality assessment, format etc), please note that more columns are available but not displayed here. The complete set of columns can be visualized via topcat as described below or using More output fields selection button in the search query. Querying the released data is also possible using e.g. TOPCAT using TAP. Via the TAP protocol, it is possible to query the registry in a more flexible way using an enriched SQL syntax called ADQL. An example is given in :numref:`ADQL_query` : click the link indicated with the red ellipse on the left panel Try ADQL and place your ADQL query on the query form.
 
 .. figure:: images/ADQL_query_fig5.png
  :align: center
@@ -65,7 +65,7 @@ In the column Related products another link connects to a page containing a list
  :alt: Relative flux error
  :name: ADQL_query
 
-  ADQL query form.
+ ADQL query form.
 
 The table names to use in the query form of :numref:`ADQL_query`, are summarized in :numref:`ADQL_table`. The URL  for the query is then: https://vo.astron.nl/apertif_dr1/q/{Table name}/form (e.g. http://dop457.astron.nl:5555/apertif_dr1/q/apertif_dr1_continuum_images/form}.
 
