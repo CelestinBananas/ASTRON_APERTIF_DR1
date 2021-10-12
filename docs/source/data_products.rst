@@ -52,19 +52,18 @@ The overall consistency is very good with a mean of 1.014 and an rms of 4% . If 
   200106010,  1.0000
 
 An example of two observations (ObsID 200106010 and 190909049, observed at 06.01.2020 and 09.09.2019 respectively) compared to one another is shown in :numref: `flux_cmp_1`. Plotted is the relative difference in flux versus the flux in the 06.01.2020 observation.
-.. _label: flux_cmp_1
 .. figure:: images/flux_cmp_1.png
   :align: center
   :width: 400
   :alt: Relative flux error
 
-  Figure 1. Relative flux difference between the sources in a mosaic of ObsID 200106010 and a mosaic of ObsID 190909049 as a function of their flux measured in ObsID 200106010.
+  Relative flux difference between the sources in a mosaic of ObsID 200106010 and a mosaic of ObsID 190909049 as a function of their flux measured in ObsID 200106010.
 
 To assess the agreement with the NVSS we made mosaics of the full field of view (40 beams) of all observations using the measured shapes of the 40 beams. The reason for using mosaics rather than individual beams was to have a large enough number of sources for the comparison as in an individual beam there usually are only of order a dozen that are bright enough. The mosaicing routine takes into account shapes of the beams made with the phased array feeds as determined from drift scans across Cygnus A (see the section on Primary beam response: Drift scan method) and corrects for the presence of correlated noise in adjacent beams. The mosaics were made with a resolution of 28" x 28". We ran PyBDSF on the mosaics to produce a source catalog and compared sources in this catalogue with the sources in the NVSS source catalog extracted from VizieR. For the comparison we restricted ourselves to sources that agree in position to within 4", are less than 28.5" in size and stronger than 3 mJy in the Apertif mosaic.
 
 Table 2 captures the comparison of the individual mosaics with the NVSS. For each ObsID the median flux ratio NVSS / Apertif is given. On average the Apertif flux scale is 3% above the NVSS flux scale for these mosaics with an rms of 4%. If the two most discrepant ObsIDs are omitted (191207035 and 191227014) the rms reduces to 2%. Figure 2 illustrates the agreement between the Apertif and NVSS flux scale for ObsID 200102012. Since the observing frequency of the mosaic is 1360 MHz as opposed to the 1400 MHz of NVSS ~2% of the flux difference can be accounted for by spectral index effects (assuming an average spectral index of -0.7) which were not taken into account.
 
-.. csv-table:: Table 2
+.. csv-table::
   :align: center
   :header: "ObsID", "Median Flux Ratio"
   :widths: 20, 20
@@ -87,7 +86,7 @@ A flux scale comparison using the beam shapes determined from a direct compariso
   :width: 400
   :alt: Relative flux error
 
-  Figure 2. Relative flux difference of sources in the NVSS catalogue and sources measured in an aperitif mosaic of ObsID 200102012 as a function of the flux of the sources in the NVSS catalogue
+  Relative flux difference of sources in the NVSS catalogue and sources measured in an aperitif mosaic of ObsID 200102012 as a function of the flux of the sources in the NVSS catalogue
 
 This is described in "Characterization of the primary beams" and yields a current estimate of the flux scale of Apertif as compared to NVSS. From this comparison the Apertif fluxes are on average 9% higher than those of NVSS, accounting for a nominal spectral index of the sources of -0.7.
 
@@ -98,7 +97,7 @@ Since we had to match sources in Apertif and NVSS for the source comparison we a
   :width: 400
   :alt: Relative flux error
 
-  Figure 3. Position difference between the sources in the NVSS catalogue and the sources detected in the mosaic of ObsID 200102012.
+  Position difference between the sources in the NVSS catalogue and the sources detected in the mosaic of ObsID 200102012.
 
 Polarization
 **************
@@ -203,14 +202,14 @@ Whether a cube is part of the data release is determined by the quality criteria
   :width: 400
   :alt: Relative flux error
 
-  Figure 4. Distribution of cubes 2 of all beams in the fex-p0.8 plane (grey points). Overplotted are quality assessments of the beams of 14 observations. Good cubes are indicated by green points, OK by orange points and bad cubes by red points. The blue lines indicate the regions where cubes are considered good (left region) or OK (right region).
+  Distribution of cubes 2 of all beams in the fex-p0.8 plane (grey points). Overplotted are quality assessments of the beams of 14 observations. Good cubes are indicated by green points, OK by orange points and bad cubes by red points. The blue lines indicate the regions where cubes are considered good (left region) or OK (right region).
 
 .. figure:: images/qa_overview.png
   :align: center
   :width: 400
   :alt: Relative flux error
 
-  Figure 5. Examples of the three quality classes used for the HI quality assessment. The top row shows an example of a "good" observation (Obsid 200202012, beam 17, cube 2), the middle one an "OK" observation (Obsid 200202012, beam 33, cube 2) and the bottom one a "bad" observation (Obsid 200202012, beam 20, cube 2). The columns show, from left to right, the noise histogram, an extract of the central velocity channel, and a position-velocity diagram through the center of the cube. In the plots in the left column the short horizontal line at the top indicates the rms. The two dotted vertical lines indicate the ±6.75 x rms values. The "good" observation in the top row shows hardly any artefacts and a Gaussian noise histogram. The "OK" observation in the middle row shows a minor continuum subtraction artefact (which in turn causes somewhat extended wings to the noise histogram). The "bad" observation in the bottom row shows major continuum subtraction artefacts, resulting in a very non-Gaussian histogram.
+  Examples of the three quality classes used for the HI quality assessment. The top row shows an example of a "good" observation (Obsid 200202012, beam 17, cube 2), the middle one an "OK" observation (Obsid 200202012, beam 33, cube 2) and the bottom one a "bad" observation (Obsid 200202012, beam 20, cube 2). The columns show, from left to right, the noise histogram, an extract of the central velocity channel, and a position-velocity diagram through the center of the cube. In the plots in the left column the short horizontal line at the top indicates the rms. The two dotted vertical lines indicate the ±6.75 x rms values. The "good" observation in the top row shows hardly any artefacts and a Gaussian noise histogram. The "OK" observation in the middle row shows a minor continuum subtraction artefact (which in turn causes somewhat extended wings to the noise histogram). The "bad" observation in the bottom row shows major continuum subtraction artefacts, resulting in a very non-Gaussian histogram.
 
 External comparison
 ------------------------
@@ -228,11 +227,11 @@ Overall the properties of the Apertif detections agree well with the ALFALFA det
   :width: 400
   :alt: Relative flux error
 
-  Figure 6. Comparing the properties of overlapping Apertif and ALFALFA sources. First panel\: systemic velocity, second panel\: W20 line width, third panel\: integrated flux. The different colored markers represent sources detected in “good” (G), “OK” (O), and “bad” (B) quality HI data cubes.
+  Comparing the properties of overlapping Apertif and ALFALFA sources. First panel\: systemic velocity, second panel\: W20 line width, third panel\: integrated flux. The different colored markers represent sources detected in “good” (G), “OK” (O), and “bad” (B) quality HI data cubes.
 
 .. figure:: images/histograms_with_val.png
   :align: center
   :width: 400
   :alt: Relative flux error
 
-  Figure 7. Distribution of the difference in systemic velocity, W20 and integrated flux between Apertif and ALFALFA detections. The colors represent detections in “good” (G), “OK” (O), and “bad” (B) quality HI data cubes.
+  Distribution of the difference in systemic velocity, W20 and integrated flux between Apertif and ALFALFA detections. The colors represent detections in “good” (G), “OK” (O), and “bad” (B) quality HI data cubes.
