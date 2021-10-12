@@ -44,8 +44,9 @@ Processed data products are ingested back into ALTA on a per-beam basis, and in 
 
 An important note is that currently only the upper 150 MHz of the band is processed; thus the processed data products are produced over the range 1280-1430 MHz. Moreover, the first 12.5 MHz of data are flagged due to persistent RFI, therefore the resulting central frequency is 1361.25 MHz. The nominal bandwidth is then 137.5 MHz, but effectively it could be smaller due to additional RFI flagging. The (currently archived) data products are described below:
 
-* Calibration tables
-The crosscal module portion of Apercal produces calibration tables that can be applied to the original data to reproduce the cross calibration. These tables are in standard CASA/MS format and a summary of all the calibration tables is provided in :numref:`cal_table` , where 3CFFF refers to a flux/bandpass calibrator (namely, 3C147 or 3C196; occasionally 3C295) and 3CPPP to a polarization calibrator (namely, 3C286 or 3C138).
+* **Calibration tables**
+
+  The crosscal module portion of Apercal produces calibration tables that can be applied to the original data to reproduce the cross calibration. These tables are in standard CASA/MS format and a summary of all the calibration tables is provided in :numref:`cal_table` , where 3CFFF refers to a flux/bandpass calibrator (namely, 3C147 or 3C196; occasionally 3C295) and 3CPPP to a polarization calibrator (namely, 3C286 or 3C138).
 
 .. csv-table:: Calibration tables and naming scheme.
   :align: center
@@ -61,17 +62,18 @@ The crosscal module portion of Apercal produces calibration tables that can be a
   Leakage terms, 	3CFFF.Df
   XY phase offset, 	3CPPP.Xf
 
-* Full time, Stokes and spectral-resolution calibrated visibility data
-After the completion of the self-calibration, the final selfcal solutions are applied to the full spectral resolution uv data, and this uv dataset is written out as a UVFITS file as an intermediate data product. Currently, the final calibrated uv-data are stored at full time and spectral resolution for all polarizations; this may change with future updates to the processing pipeline.
+* **Full time, Stokes and spectral-resolution calibrated visibility data**
 
-* Continuum images
+  After the completion of the self-calibration, the final selfcal solutions are applied to the full spectral resolution uv data, and this uv dataset is written out as a UVFITS file as an intermediate data product. Currently, the final calibrated uv-data are stored at full time and spectral resolution for all polarizations; this may change with future updates to the processing pipeline.
+
+* **Continuum images**
 
   A multi-frequency Stokes I image is created over the full processed frequency range (currently 150 MHz; effectively less due to RFI occupancy) and saved as a FITS file for each beam. These images are 3.4°×3.4°(3073×3073 pixels, with 4′′/pixel). This samples well outside the primary beam response but is necessary to account for cases where a strong source is in a side-lobe and needs to be included in the self-calibration model and cleaning. Sources above 5-σ should be identified and cleaned to the 1-σ level.
 
-**Polarization images and cubes**
+* **Polarization images and cubes**
   A multi-frequency Stokes V image over the full bandwidth is produced. This image matches the continuum image in spatial extent: 3.4°×3.4°(3073×3073 pixels, with 4′′/pixel). In order to prevent bandwidth depolarization and enable rotation measure synthesis studies, Stokes Q and U cubes with a frequency resolution of 6.25 MHz are produced. The cubes have a smaller spatial extent of 2.7°×2.7°(2049×2049 pixels, with 4′′/pixel).
 
-**Line and dirty beam cubes**
+* **Line and dirty beam cubes**
 
   Four line cubes over a set of different frequency ranges are produced. :numref:`cube_params` summarizes the covered frequency ranges and provides the corresponding redshift range for HI. The lowest redshift cube is produced at full spectral resolution while other cubes are produced with a 3-channel averaging. These cubes have a spatial extent of 1.1°×1.1°(661×661 pixels, with 6′′/pixel). As the Apercal pipeline does not provide source finding or cleaning of the line cubes, corresponding dirty beam cubes, with twice the spatial coverage, are also archived to allow offline cleaning of source emission.
 
