@@ -1,5 +1,5 @@
 =============================================================================
-Comparing the SFR-Luminosity relations of the Millennium Simulations and SDSS
+Testing "pandocs" conversion of .latex to .rst
 =============================================================================
 
 :Author: Celestin Herbe-George
