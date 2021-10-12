@@ -206,10 +206,8 @@ Table 2: Apertif/NVSS integrated flux, standard deviation of flux ratio, and med
 Apercal
 ########
 Overview and Structure
-***********************
+------------------------
 
-Apercal pipeline modules
--------------------------
 The Apertif calibration pipeline Apercal is a combination of different modules, which are usually executed one after another. An overview of the whole reduction pipeline is given in :numref:`apercal_str`. Each rectangular box represents a single module. The grey boxes encapsulate the astronomical software packages used within the individual modules. Arrows illustrate the data and workflow within the pipeline. The dashed arrows and lines are routines which are currently in development.
 
 .. figure:: images/Apercal_structure.png
@@ -237,14 +235,17 @@ At the top level, the role of each module is:
 
 In the following, we give more details on each of the individual modules.
 
-* **AUTOCAL**
+Apercal pipeline modules
+----------------------------
 
+* **AUTOCAL**
+****************
   When a new observation is uploaded to the Apertif Long Term Archive (ALTA), AUTOCAL automatically retrieves information about the target, flux and polarisation calibrator and triggers the start of the pipeline. Operating as a cron job, AUTOCAL first identifies a given observation as a target and then searches the Apertif Task DataBase (ATDB) for calibrators before and after.
 
   Once AUTOCAL has successfully identified a target and the accompanying polarisation/flux calibrators, it sends all necessary information to Apercal, so that the pipeline can begin downloading the relevant data from ALTA. In addition to triggering the pipeline, AUTOCAL also triggers the automatic quality assessment (QA) pipeline, which inspects the raw data, calibration solutions and images, and ingests the processed data products back to ALTA, with associated notifications for each stage.
 
-* **PREPARE**
-
+PREPARE
+**************
   Apercal defines a directory structure for processing where each module uses its own subdirectory to access data and save outputs. All of the following modules (except CONVERT) use a single subdirectory, so that individual steps can easily be deleted and restarted. The naming of the directories can be adjusted to the needs of the users with keywords in the configuration file.
 
   The main tasks of the PREPARE module are the setup of the directory structure and the download of the data. Once the module is executed given an input target and calibrator datasets, it checks the availability of the data on the local disc. In case data is not locally available, the module checks the availability on ALTA via an irods framework. If successful, a python routine is used to download the data to the local disc and to place it in the appropriate position of the directory structure. After a dataset has been successfully copied from ALTA or located on disc, the correctness of the file is checked via a checksum.
