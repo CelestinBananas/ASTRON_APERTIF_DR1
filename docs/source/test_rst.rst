@@ -68,11 +68,11 @@ as this is a database of galaxies and is shown in figure
               commentstyle=\color{gray}
            ]
    SELECT TOP 10000 sfr,
-   stellarMass, mag_b, 
-   mag_v, mag_r, redshift, 
-   bulgeMass           
-   FROM millimil..DeLucia2006a         
-   WHERE snapnum = 59 
+   stellarMass, mag_b,
+   mag_v, mag_r, redshift,
+   bulgeMass
+   FROM millimil..DeLucia2006a
+   WHERE snapnum = 59
    AND mag_r != 99.0
 
 ::
@@ -86,16 +86,16 @@ as this is a database of galaxies and is shown in figure
               numberstyle=\tiny,
               commentstyle=\color{gray}
            ]
-   SELECT TOP 10000 s.SpecObjID, 
-   s.z, dbo.fCosmoDl(s.z), 
+   SELECT TOP 10000 s.SpecObjID,
+   s.z, dbo.fCosmoDl(s.z),
    s.fiberMag_r, L.height, L.sigma,
    L.wave, L.restWave
    FROM SpecPhoto as s
-   JOIN SpecLine as L 
+   JOIN SpecLine as L
    ON s.SpecObjID = L.specObjID
-   WHERE ObjType = 0 
-   AND L.LineID = 6565 
-   AND abs(s.z-0.1) < 0.011 
+   WHERE ObjType = 0
+   AND L.LineID = 6565
+   AND abs(s.z-0.1) < 0.011
    AND L.height >0000
 
 The stellar mass was then plotted against the absolute r-magnitude as
@@ -124,12 +124,12 @@ fit yielding parameters :math:`a = 1.223` and :math:`b = -1.161` and
 subscript :math:`s` the spiral sub sample. This spiral sub sample was
 also applied to figure `1 <#fig:logmass>`__.
 
-.. figure:: Figures/logM_magr.pdf
-   :alt: 
+.. figure:: images/logM_magr.pdf
+   :alt:
    :name: fig:logmass
 
-.. figure:: Figures/M_L.pdf
-   :alt: 
+.. figure:: images/M_L.pdf
+   :alt:
 
 [fig:M_L]
 
@@ -170,7 +170,7 @@ Using the absolute magnitude and equation (`[eq:L] <#eq:L>`__) the r
 band luminosity can be found. The SFR was then plotted against the r
 band luminosity and is shown in figure `2 <#fig:SFR>`__.
 
-.. figure:: Figures/SFR.pdf
+.. figure:: images/SFR.pdf
    :alt: The star formation rate against the r band luminosity for 10
    000 galaxies from both the Millennium Simulation data (blue) and the
    SDSS observational data (orange).
