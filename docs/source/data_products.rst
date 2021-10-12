@@ -51,7 +51,7 @@ The overall consistency is very good with a mean of 1.014 and an rms of 4% . If 
   200104011,  1.0222
   200106010,  1.0000
 
-An example of two observations (ObsID 200106010 and 190909049, observed at 06.01.2020 and 09.09.2019 respectively) compared to one another is shown in :numref: `flux_cmp_1`. Plotted is the relative difference in flux versus the flux in the 06.01.2020 observation.
+An example of two observations (ObsID 200106010 and 190909049, observed at 06.01.2020 and 09.09.2019 respectively) compared to one another is shown in :numref:`flux_cmp_1`. Plotted is the relative difference in flux versus the flux in the 06.01.2020 observation.
 
 .. figure:: images/flux_cmp_1.png
   :align: center
@@ -176,7 +176,7 @@ Continuum subtraction artefacts (and with it the presence of residual grating ri
 
 The presence of sub-bands with lower quality (i.e., a higher noise) manifests itself not by wings of extreme pixels but by a systematic change in the shape of the histogram through the addition of "shoulders" to the histogram (lower kurtosis). Trial and error showed that the presence of these features were best detected by comparing the rms width of the histogram with that at the level of 0.8 percent of the maximum of the histogram. We define the parameter  p0.8 or the ratio of this 0.8 percent width and the rms.
 
-We compared our "good", "bad" or "OK" rankings as determined by eye for the 14 observations with the corresponding fex and p0.8 values.  This is illustrated in :numref:`flux_cmp_1` where we show the distribution of all cubes 2 in the  fex-p0.8 plane with the cubes which we inspected by eye color coded to indicate their quality ranking.
+We compared our "good", "bad" or "OK" rankings as determined by eye for the 14 observations with the corresponding fex and p0.8 values.  This is illustrated in **REF** where we show the distribution of all cubes 2 in the  fex-p0.8 plane with the cubes which we inspected by eye color coded to indicate their quality ranking.
 
 "Good" cubes, i.e., those with no or very minor artefacts, were concentrated in a small part of parameter space obeying the following criteria:
 
