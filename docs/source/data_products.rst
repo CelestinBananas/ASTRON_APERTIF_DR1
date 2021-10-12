@@ -67,6 +67,7 @@ After the completion of the self-calibration, the final selfcal solutions are ap
 
   Global delays, 3CFFF.K
   Bandpass solutions, 3CFFF.Bscan
+  "Intermediary, initial phase solutions", 3CFFF.G0ph
   Final complex gain solutions, 	3CFFF.G1ap
   Crosshand delay, 	3CPPP.Kcross
   Leakage terms, 	3CFFF.Df
