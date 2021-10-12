@@ -1,4 +1,4 @@
-Image Quality
+Data Quality
 =============
 
 Continuum image quality
@@ -9,7 +9,7 @@ The noise values for all released continuum images are shown in :numref:`dq_1`. 
 
 The noise values skew to higher values from the median. This is likely because some images may still have minor imaging artifacts. Any issue affecting image quality will only ever increase the noise of an image.
 
-.. figure:: images/data_quality_1-e1604930867107.png
+.. figure:: images/data_quality_1.png
   :align: center
   :width: 400
   :alt: Relative flux error
