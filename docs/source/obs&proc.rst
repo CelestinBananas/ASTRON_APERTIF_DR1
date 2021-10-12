@@ -21,7 +21,7 @@ All raw observational data from the imaging surveys through the first year of su
   :alt: Relative flux error
   :name: dr_year1_apercal_processing_ames
 
-   A view of the processing for medium-deep fields with repeat visits. The observations are ordered in time-order and the color code refers to the same processing as for the figure above.
+  A view of the processing for medium-deep fields with repeat visits. The observations are ordered in time-order and the color code refers to the same processing as for the figure above.
 
 Notes on the data quality/processing  for specific observations can be found here.
 
@@ -53,7 +53,7 @@ We wish to emphasize that the use of the classic WSRT primary beam correction is
   :alt: Relative flux error
   :name: dif_oldwsrt
 
-   Compound beam shapes derived from drift scans divided by the classic WSRT primary beam. Contours are: 0.2, 0.4, 0.6, 0.8, 1.0.
+  Compound beam shapes derived from drift scans divided by the classic WSRT primary beam. Contours are: 0.2, 0.4, 0.6, 0.8, 1.0.
 
 
 
@@ -69,7 +69,7 @@ Drift scan observations are scheduled using the aperdrift code : https://github.
   :alt: Relative flux error
   :name: drift_scan_CygA
 
-   Illustration of drift scan observations. The dots represent the beam centres of the 40 Apertif beams, and the lines represent individual drifts across the field of view of the Apertif footprint.
+  Illustration of drift scan observations. The dots represent the beam centres of the 40 Apertif beams, and the lines represent individual drifts across the field of view of the Apertif footprint.
 
 Beam models
 -------------
