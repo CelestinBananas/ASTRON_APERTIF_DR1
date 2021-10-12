@@ -31,7 +31,7 @@ Primary Beam Response
 #########################
 
 Overview of primary beam shapes for Apertif
----------------------------------------------
+*********************************************
 
 Knowing the primary beam shape of a radio telescope is critical for deriving accurate fluxes away from the beam center. In the case of PAFs, the primary beam response, also known as the compound beam shape, must be independently measured for each compound beam as they are not constrained to have the same shape. Generally, formed beams further from the pointing center of the PAF will have more elongated shapes.
 
@@ -58,7 +58,7 @@ We wish to emphasize that the use of the classic WSRT primary beam correction is
 
 
 Drift scan method
-------------------
+*********************
 Beam maps are produced from drift scans performed periodically on Cygnus A (CygA hereafter). Cyg A is chosen for the drift scans since it is one of the brightest compact radio sources in the northern sky, with a brightness of 1589 Jy (Birzan et al. 2004) an extent of approximately 5′ at 1.4 GHz, which makes it an unresolved continuum source for a single WSRT dish. During the drift scan measurement the PAF is at a fixed position on the sky and Cyg A drifts through the field of view in a straight line. The separation between the drifts is 0.1 degrees in declination. This is then repeated 31 times to cover the whole field of view of the 40 Apertif beams. :numref:`drift_scan_CygA` illustrates this process.
 
 Drift scan observations are scheduled using the aperdrift code : https://github.com/kmhess/aperdrift
@@ -72,7 +72,7 @@ Drift scan observations are scheduled using the aperdrift code : https://github.
    Illustration of drift scan observations. The dots represent the beam centres of the 40 Apertif beams, and the lines represent individual drifts across the field of view of the Apertif footprint.
 
 Beam models
-^^^^^^^^^^^^^^
+-------------
 The auto correlation data from the drift scans is used to construct fits images of each beams response to Cyg A. Then we perform a 40 times 40 pixel spline interpolation for each beam to minimise the distorting effect of bad data (e.g. RFI) to the beam map. For this, we use the scipy package interpolate.RectBivariateSpline, which performs a bivariate spline approximation over a rectangular mesh to smooth the data.
 
 Once the fitting is done, we write out the resulting beam maps into a csv table and also into 9 times 40 fits files corresponding to 9 frequency bins for all 40 beams.
@@ -91,7 +91,7 @@ The code to produce the beam maps is available at: https://github.com/apertif/ap
 
 
 Time variability
-^^^^^^^^^^^^^^^^^
+-------------------
 
 Beam weights are measured at the start of every imaging observing run and are typically used for 2 weeks in a row. The beam weights define the shape of the compound beams. They depend on the quality of the beam weight measurement, (e.g. RFI at the time of the measurement) and also on the health of the system (e.g. broken elements on the PAFs, dysfunctional antennas). Drift scans are typically measured once per month due to the time intensive nature of the measurement. The beam models derived from drift scans observed at different times typically vary by a few percent (rms of the difference).
 
@@ -104,7 +104,7 @@ Beam weights are measured at the start of every imaging observing run and are ty
   Normalised distribution of the pixel by pixel difference between beam maps observed in September 2019 and in October 2019. The rms of the distribution is 0.018.
 
 Beam size change with frequency
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------------
 Beam shapes and sizes change across the field of view of Apertif with the central beams being more symmetric and the beams along the edge of the field of view more elongated. :numref:`chann_9` and :numref:`chann_7` show the average beam size (FWHM), and the FWHM along the x and y axis as a function of beam number. :numref:`chann_9` shows the beam size for frequency bin 7 (1.363 GHz) and :numref:`chann_7` shows the same for frequency bin 9 (1.399 GHz).
 
 .. figure:: images/190912_chann_9_FWHM-1024x706.png
@@ -175,7 +175,7 @@ Two sets of primary beam images are released for each compound beam. The first s
 The second set (“norm”) are primary beam images normalized to have responses between 0-1, as is typical for primary beam images.  Applying these primary beam images to the Apertif data will include systematic offsets between the measured Apertif fluxes and the NVSS catalog fluxes; this is discussed and quantified in "Characterization of the primary beams".
 
 Characterization of the primary beams
-----------------------------------------
+****************************************
 
 
 In order to provide information on the reliability of the measured primary beam images, we undertake an empirical comparison to the NVSS catalog over the full data release. While similar in philosophy to the Gaussian process regression used to derive the primary beam images, this comparison provides information about overall systematics in the flux scale, in addition to quantifying the scatter in the accuracy of derived fluxes using the provided primary beam images. It also allows a direct comparison between the reliability and accuracy of primary beam images derived from different measurement techniques.
@@ -206,7 +206,7 @@ Table 2: Apertif/NVSS integrated flux, standard deviation of flux ratio, and med
 Apercal
 ########
 Overview and Structure
-------------------------
+************************
 
 The Apertif calibration pipeline Apercal is a combination of different modules, which are usually executed one after another. An overview of the whole reduction pipeline is given in :numref:`apercal_str`. Each rectangular box represents a single module. The grey boxes encapsulate the astronomical software packages used within the individual modules. Arrows illustrate the data and workflow within the pipeline. The dashed arrows and lines are routines which are currently in development.
 
@@ -236,16 +236,16 @@ At the top level, the role of each module is:
 In the following, we give more details on each of the individual modules.
 
 Apercal pipeline modules
-----------------------------
+*************************
 
 * **AUTOCAL**
-****************
+----------------
   When a new observation is uploaded to the Apertif Long Term Archive (ALTA), AUTOCAL automatically retrieves information about the target, flux and polarisation calibrator and triggers the start of the pipeline. Operating as a cron job, AUTOCAL first identifies a given observation as a target and then searches the Apertif Task DataBase (ATDB) for calibrators before and after.
 
   Once AUTOCAL has successfully identified a target and the accompanying polarisation/flux calibrators, it sends all necessary information to Apercal, so that the pipeline can begin downloading the relevant data from ALTA. In addition to triggering the pipeline, AUTOCAL also triggers the automatic quality assessment (QA) pipeline, which inspects the raw data, calibration solutions and images, and ingests the processed data products back to ALTA, with associated notifications for each stage.
 
 PREPARE
-**************
+-----------
   Apercal defines a directory structure for processing where each module uses its own subdirectory to access data and save outputs. All of the following modules (except CONVERT) use a single subdirectory, so that individual steps can easily be deleted and restarted. The naming of the directories can be adjusted to the needs of the users with keywords in the configuration file.
 
   The main tasks of the PREPARE module are the setup of the directory structure and the download of the data. Once the module is executed given an input target and calibrator datasets, it checks the availability of the data on the local disc. In case data is not locally available, the module checks the availability on ALTA via an irods framework. If successful, a python routine is used to download the data to the local disc and to place it in the appropriate position of the directory structure. After a dataset has been successfully copied from ALTA or located on disc, the correctness of the file is checked via a checksum.
