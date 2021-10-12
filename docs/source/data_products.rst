@@ -33,12 +33,13 @@ Flux scale & astrometry
 ---------------------------
 For checking the consistency of the flux scale two beams of an observation of a field in the Perseus-Pisces region centered on RA(J2000) = 01h55m and Dec(J2000) = 33d56’ which was observed ten times between September 2019 and January 2020 were examined. The automatic source finder PyBDSF (also used in the Apercal pipeline) was used to find and determine source fluxes, positions and sizes and compared these from observation to observation. We restricted the comparison to sources that are less than 35” in size and have fluxes above 3 mJy (100 times the typical rms noise)  and agree in position to within 3 arcsecs to ensure that the sources used for comparison are indeed identical and have been included in the clean masks.
 
-The overall consistency is very good with a mean of 1.014 and an rms of 4% . If one excludes the two most discrepant observations (ObsID 191207035 and 191227014) the rms decreases to 2%. Table 1 provides the flux ratio of 10 observations relative to the last observation made on 06.01.2020 (ObsID 200106010)
+The overall consistency is very good with a mean of 1.014 and an rms of 4% . If one excludes the two most discrepant observations (ObsID 191207035 and 191227014) the rms decreases to 2%. :numref:`flux_ratio_10` provides the flux ratio of 10 observations relative to the last observation made on 06.01.2020 (ObsID 200106010)
 
 .. csv-table:: The flux ratio of 10 observations relative to the last observation made on 06.01.2020 (ObsID 200106010)
   :align: center
   :header: "ObsID", "Median Flux Ratio"
   :widths: 20, 20
+  :name: flux_ratio_10
 
   190919049, 0.9982
   191207035, 0.9311
@@ -63,12 +64,13 @@ An example of two observations (ObsID 200106010 and 190909049, observed at 06.01
 
 To assess the agreement with the NVSS we made mosaics of the full field of view (40 beams) of all observations using the measured shapes of the 40 beams. The reason for using mosaics rather than individual beams was to have a large enough number of sources for the comparison as in an individual beam there usually are only of order a dozen that are bright enough. The mosaicing routine takes into account shapes of the beams made with the phased array feeds as determined from drift scans across Cygnus A (see the section on Primary beam response: Drift scan method) and corrects for the presence of correlated noise in adjacent beams. The mosaics were made with a resolution of 28" x 28". We ran PyBDSF on the mosaics to produce a source catalog and compared sources in this catalogue with the sources in the NVSS source catalog extracted from VizieR. For the comparison we restricted ourselves to sources that agree in position to within 4", are less than 28.5" in size and stronger than 3 mJy in the Apertif mosaic.
 
-Table 2 captures the comparison of the individual mosaics with the NVSS. For each ObsID the median flux ratio NVSS / Apertif is given. On average the Apertif flux scale is 3% above the NVSS flux scale for these mosaics with an rms of 4%. If the two most discrepant ObsIDs are omitted (191207035 and 191227014) the rms reduces to 2%. Figure 2 illustrates the agreement between the Apertif and NVSS flux scale for ObsID 200102012. Since the observing frequency of the mosaic is 1360 MHz as opposed to the 1400 MHz of NVSS ~2% of the flux difference can be accounted for by spectral index effects (assuming an average spectral index of -0.7) which were not taken into account.
+:numref:`flux_ratio_2` captures the comparison of the individual mosaics with the NVSS. For each ObsID the median flux ratio NVSS / Apertif is given. On average the Apertif flux scale is 3% above the NVSS flux scale for these mosaics with an rms of 4%. If the two most discrepant ObsIDs are omitted (191207035 and 191227014) the rms reduces to 2%. :numref:`flux_cmp_2` illustrates the agreement between the Apertif and NVSS flux scale for ObsID 200102012. Since the observing frequency of the mosaic is 1360 MHz as opposed to the 1400 MHz of NVSS ~2% of the flux difference can be accounted for by spectral index effects (assuming an average spectral index of -0.7) which were not taken into account.
 
 .. csv-table::
   :align: center
   :header: "ObsID", "Median Flux Ratio"
   :widths: 20, 20
+  :name: flux_ratio_2
 
   190919049, 0.943
   191207035, 0.894
@@ -87,17 +89,19 @@ A flux scale comparison using the beam shapes determined from a direct compariso
   :align: center
   :width: 400
   :alt: Relative flux error
+  :name: flux_cmp_2
 
   Relative flux difference of sources in the NVSS catalogue and sources measured in an aperitif mosaic of ObsID 200102012 as a function of the flux of the sources in the NVSS catalogue
 
 This is described in "Characterization of the primary beams" and yields a current estimate of the flux scale of Apertif as compared to NVSS. From this comparison the Apertif fluxes are on average 9% higher than those of NVSS, accounting for a nominal spectral index of the sources of -0.7.
 
-Since we had to match sources in Apertif and NVSS for the source comparison we also obtained information on the agreement between the Apertif and NVSS astrometry. Figure 3 shows the positional differences for sources in the mosaic of ObsID 200102012 and the NVSS catalogue. The agreement is very good with mean offsets of 0.05 +/- 0.2  arcsec in RA and -0.05 +/- 0.2  arcsec in Dec.
+Since we had to match sources in Apertif and NVSS for the source comparison we also obtained information on the agreement between the Apertif and NVSS astrometry. :numref:`flux_cmp_3` shows the positional differences for sources in the mosaic of ObsID 200102012 and the NVSS catalogue. The agreement is very good with mean offsets of 0.05 +/- 0.2  arcsec in RA and -0.05 +/- 0.2  arcsec in Dec.
 
 .. figure:: images/flux_cmp_3.png
   :align: center
   :width: 400
   :alt: Relative flux error
+  :name: flux_cmp_3
 
   Position difference between the sources in the NVSS catalogue and the sources detected in the mosaic of ObsID 200102012.
 
@@ -158,7 +162,7 @@ HI
 ********
 Cube Validation
 ---------------------
-The quality of the HI line data was validated in multiple steps. We concentrate the analysis on cubes 0, 1, and 2 (see Table 2 in the "Available data products" document for the frequency ranges of the cubes), as the quality of cube 3 always followed that of cube 2 due to both of them being in adjacent low-RFI frequency ranges.
+The quality of the HI line data was validated in multiple steps. We concentrate the analysis on cubes 0, 1, and 2 (see Table 2 **REF** in the "Available data products" document for the frequency ranges of the cubes), as the quality of cube 3 always followed that of cube 2 due to both of them being in adjacent low-RFI frequency ranges.
 
 As a first step all cubes 0, 1, and 2 where the average rms noise was larger than 3 mJy/beam were rejected. Inspection of the cubes showed that such large noise values always indicates the presence of major artefacts in the cube.
 
@@ -195,7 +199,7 @@ The upper limit of -4.52 of the second condition is not a hard limit and a sligh
 Cubes not obeying any of these two sets of criteria were considered “bad”.
 Using these conditions we defined for all cubes 0, 1 and 2 a subset of good and OK cubes. Cube 3 in all cases follows the quality designation of cube 2.
 
-Figure 5 shows the noise histograms and a representative channel map and position velocity slice for each of the three quality categories.
+:numref:`qa_overview` shows the noise histograms and a representative channel map and position velocity slice for each of the three quality categories.
 
 Whether a cube is part of the data release is determined by the quality criteria of the corresponding continuum image. This is described in more detail in the document “Released processed data products”. The quality of each cube and the metrics used to determine that quality are included in the VO table describing the released HI observations (see "User interfaces").
 
@@ -210,6 +214,7 @@ Whether a cube is part of the data release is determined by the quality criteria
   :align: center
   :width: 400
   :alt: Relative flux error
+  :name: qa_overview
 
   Examples of the three quality classes used for the HI quality assessment. The top row shows an example of a "good" observation (Obsid 200202012, beam 17, cube 2), the middle one an "OK" observation (Obsid 200202012, beam 33, cube 2) and the bottom one a "bad" observation (Obsid 200202012, beam 20, cube 2). The columns show, from left to right, the noise histogram, an extract of the central velocity channel, and a position-velocity diagram through the center of the cube. In the plots in the left column the short horizontal line at the top indicates the rms. The two dotted vertical lines indicate the ±6.75 x rms values. The "good" observation in the top row shows hardly any artefacts and a Gaussian noise histogram. The "OK" observation in the middle row shows a minor continuum subtraction artefact (which in turn causes somewhat extended wings to the noise histogram). The "bad" observation in the bottom row shows major continuum subtraction artefacts, resulting in a very non-Gaussian histogram.
 
@@ -220,7 +225,7 @@ In order to further validate the line cubes, we performed preliminary source fin
 
 Comparison to ALFALFA
 ^^^^^^^^^^^^^^^^^^^^^^^^^
-We compared the properties of HI detections in Apertif with the properties of HI detections in the ALFALFA catalogue (Haynes et al. 2018). We created a source catalogue with SoFiA and cross matched the detected sources with the ALFALFA catalogue. In 21 fields that overlap in the footprint of both surveys, we found 479 matching sources. Out of these, 336 sources were found in data cubes with "good" quality, 39 in data cubes with "OK" quality and 104 were found in "bad" quality data cubes. The results of the comparison are shown in figures 6 and 7. The color coding of these figures reflects the quality of the data cube in which the sources were identified with blue for "good", green for "OK" and orange for "bad".
+We compared the properties of HI detections in Apertif with the properties of HI detections in the ALFALFA catalogue (Haynes et al. 2018). We created a source catalogue with SoFiA and cross matched the detected sources with the ALFALFA catalogue. In 21 fields that overlap in the footprint of both surveys, we found 479 matching sources. Out of these, 336 sources were found in data cubes with "good" quality, 39 in data cubes with "OK" quality and 104 were found in "bad" quality data cubes. The results of the comparison are shown in :numref:`comparison_v4_val` and :numref:`histograms_with_val`. The color coding of these figures reflects the quality of the data cube in which the sources were identified with blue for "good", green for "OK" and orange for "bad".
 
 Overall the properties of the Apertif detections agree well with the ALFALFA detections. There are some sources that have smaller line widths (w20) than the ALFALFA sources. This is likely connected to the flagging of 3 channels out of every 64 because of the strong dropoff in response (See “Aliasing” in “System notes”). Cubes 0, 1, and 2 have every three channels averaged together. Combined with the flagging of three channels out of every 64, this means that every 22nd channel in these cubes has no signal, and there are channels with ⅓ nominal sensitivity (periodicity of 42 and 21 channels) and ⅔ nominal sensitivity (periodicity of 63 channels). These flagged or partially flagged channels can result in a source being spectrally separated into two different detections. This then also results in smaller line widths for these sources. Another reason for the smaller line widths in Apertif can be extended emission detected in ALFALFA that gets filtered out by the interferometry.
 
@@ -228,6 +233,7 @@ Overall the properties of the Apertif detections agree well with the ALFALFA det
   :align: center
   :width: 400
   :alt: Relative flux error
+  :name: comparison_v4_val
 
   Comparing the properties of overlapping Apertif and ALFALFA sources. First panel\: systemic velocity, second panel\: W20 line width, third panel\: integrated flux. The different colored markers represent sources detected in “good” (G), “OK” (O), and “bad” (B) quality HI data cubes.
 
@@ -235,5 +241,6 @@ Overall the properties of the Apertif detections agree well with the ALFALFA det
   :align: center
   :width: 400
   :alt: Relative flux error
+  :name: histograms_with_val
 
   Distribution of the difference in systemic velocity, W20 and integrated flux between Apertif and ALFALFA detections. The colors represent detections in “good” (G), “OK” (O), and “bad” (B) quality HI data cubes.
