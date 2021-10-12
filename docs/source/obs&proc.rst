@@ -196,6 +196,8 @@ The key characterization of the primary beam images is to understand the impact 
 
 Table 1 and 2 also include the standard deviation of the flux ratios for each compound beam. These values are rather large, typically ~16-17%. This does not indicate an uncertainty in the primary beam measurement at this level as there are several contributing factors. The typical measurement uncertainty is ~5%, and intrinsic source variability is on the order of ~10% (e.g., Hovatta 2009). The data release paper will undertake an accounting of all sources of scatter to quantify what the uncertainty on the flux scale from primary beam variability might be. In addition, the internal consistency of flux measurements for all medium-deep observations in the data release will be undertaken to provide an additional handle on the accuracy of the flux scale within the Apertif datasets.
 
-Table 1: ::download:`content/Table-1-Median-ratio-of-Apertif-NVSS-integrated-flux.csv` Median ratio of Apertif/NVSS integrated flux, standard deviation of flux ratio, and median measurement error of flux ratio over the full Apertif primary beam (to 10% level)
+Table 1: Median ratio of Apertif/NVSS integrated flux, standard deviation of flux ratio, and median measurement error of flux ratio over the full Apertif primary beam (to 10% level)
+::download:`content/Table-1-Median-ratio-of-Apertif-NVSS-integrated-flux.csv`
 
-Table 2: ::download:`content/Table-2-Median-ratio-of-Apertif-NVSS-integrated-flux.csv` Median ratio of Apertif/NVSS integrated flux, standard deviation of flux ratio, and median measurement error of flux ratio over the inner Apertif primary beam (≥50% level)
+Table 2: Apertif/NVSS integrated flux, standard deviation of flux ratio, and median measurement error of flux ratio over the inner Apertif primary beam (≥50% level)
+::download:`content/Table-2-Median-ratio-of-Apertif-NVSS-integrated-flux.csv` Median ratio of
