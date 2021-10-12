@@ -124,7 +124,7 @@ fit yielding parameters :math:`a = 1.223` and :math:`b = -1.161` and
 subscript :math:`s` the spiral sub sample. This spiral sub sample was
 also applied to figure `1 <#fig:logmass>`__.
 
-.. figure:: images/logM_magr.pdf
+.. figure:: images/logM_magr.png
    :alt:
    :name: fig:logmass
 
