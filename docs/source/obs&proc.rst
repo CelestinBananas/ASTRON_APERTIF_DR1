@@ -54,3 +54,9 @@ We wish to emphasize that the use of the classic WSRT primary beam correction is
   :name: dif_oldwsrt
 
    Compound beam shapes derived from drift scans divided by the classic WSRT primary beam. Contours are: 0.2, 0.4, 0.6, 0.8, 1.0.
+
+Drift scan method
+------------------
+Beam maps are produced from drift scans performed periodically on Cygnus A (CygA hereafter). Cyg A is chosen for the drift scans since it is one of the brightest compact radio sources in the northern sky, with a brightness of 1589 Jy (Birzan et al. 2004) an extent of approximately 5′ at 1.4 GHz, which makes it an unresolved continuum source for a single WSRT dish. During the drift scan measurement the PAF is at a fixed position on the sky and Cyg A drifts through the field of view in a straight line. The separation between the drifts is 0.1 degrees in declination. This is then repeated 31 times to cover the whole field of view of the 40 Apertif beams. Figure 1 illustrates this process.
+
+Drift scan observations are scheduled using the aperdrift code : https://github.com/kmhess/aperdrift
