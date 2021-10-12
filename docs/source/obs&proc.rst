@@ -299,29 +299,29 @@ In the following, we give more details on each of the individual modules.
 
   The theoretical noise T is determined by calculating the standard deviation from images generated in circular polarisation (Stokes V). Astronomical circular polarised sources are very rare on the sky and if present only at very low flux levels. Residual RFI on the other hand is often circular polarised and raises the noise levels of these images. The noise statistics of these images are therefore well representing the actual quality of the data and the theoretically reachable noise of the final images. Ttn is given in units of Jy and defined as
 
-  .. math:: Ttn = T * n_σ
+  .. math:: T_{tn} = T * n_σ
 
-  where ..:math:`n_σ`  is the confidence interval for regarding islands of emission as real. This is usually set to ..:math:`n_\sigma = 5`. If at any during a CLEAN-cycle this limit is reached, the current cycle is finished and the self-calibration stops.
+  where :math:`n_σ`  is the confidence interval for regarding islands of emission as real. This is usually set to :math:`n_\sigma = 5`. If at any during a CLEAN-cycle this limit is reached, the current cycle is finished and the self-calibration stops.
 
   In order to guarantee a smooth convergence of the self-calibration skymodel the two additional thresholds Tdr and Tn set limits for the maximum dynamic range achievable in an image without reconstruction and the adaptation to image artefacts, respectively. The dynamic range threshold within a cycle is defined by the number of the current major cycle m, the initial dynamic range DRi and a factor defining how fast the threshold should increase DR0 such as
 
-  ..:math:`T_{dr} = I_{max}  /  (DR_i  * DR_0^m)`
+  :math:`T_{dr} = I_{max}  /  (DR_i  * DR_0^m)`
 
-  where ..:math:`I_{max}` is the maximum pixel value in the residual image of the previous cycle. The parameter DRi is dependent on the level of the first major sidelobe in the dirty beam. The ratio between the maximum and this value gives the maximum dynamic range by which an image can be cleaned before another cycle of image reconstruction needs to be performed.
+  where :math:`I_{max}` is the maximum pixel value in the residual image of the previous cycle. The parameter DRi is dependent on the level of the first major sidelobe in the dirty beam. The ratio between the maximum and this value gives the maximum dynamic range by which an image can be cleaned before another cycle of image reconstruction needs to be performed.
 
   The adaption of the threshold for stopping each individual run of the CLEAN algorithm Tn  is given by
 
-  ..:math:`T_n = I_{max} / ( (c_0 + n*c_0) (m+1) )`
+  :math:`T_n = I_{max} / ( (c_0 + n*c_0) (m+1) )`
 
-  where n is the number of minor cycles and ..:math:`c_0`  handling how aggressive the cycles are performed. For each individual run of *mfclean* all three thresholds are calculated and the maximum set as a limit for the generation of masks in PyBDSF. Then cleaning is performed within this mask down to a level of the mask level divided by the parameter ..::math:`c1`, which is usually set to ..:math:`c_1=5`.
+  where n is the number of minor cycles and :math:`c_0`  handling how aggressive the cycles are performed. For each individual run of *mfclean* all three thresholds are calculated and the maximum set as a limit for the generation of masks in PyBDSF. Then cleaning is performed within this mask down to a level of the mask level divided by the parameter :math:`c1`, which is usually set to :math:`c_1=5`.
 
   The length of the solution interval s for each self-calibration cycle is determined by
 
-  ..:math:`s = ( t / n_s) / m`
+  :math:`s = ( t / n_s) / m`
 
-  where ..::math:`t` is the total observation time, ..::math:`m` again the iteration of the current major cycle and
+  where :math:`t` is the total observation time, :math:`m` again the iteration of the current major cycle and
 
-  ..::math:`n_s = \sum^l_{n=0} \frac{I(l)}{SNR\cdot T\sqrt{n_Bn_{nf} n_f}}`
+  :math:`n_s = \sum^l_{n=0} \frac{I(l)}{SNR\cdot T\sqrt{n_Bn_{nf} n_f}}`
 
   where l is the number of clean components, I the flux of each individual clean component, SNR  the needed signal-to-noise ratio, T  the theoretical noise, nB the number of baselines, nnf the number of solution intervals over frequency and nf the number of polarisations to solve for. SNR is set to 3 for phase-only calibration and to 10 for combined amplitude and phase calibration. These arithmetics ensure that solution intervals decrease during the self-calibration process consecutively while still containing enough signal-to-noise for a proper calibration.
 
