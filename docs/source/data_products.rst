@@ -350,3 +350,126 @@ Overall the properties of the Apertif detections agree well with the ALFALFA det
   :name: histograms_with_val
 
   Distribution of the difference in systemic velocity, W20 and integrated flux between Apertif and ALFALFA detections. The colors represent detections in “good” (G), “OK” (O), and “bad” (B) quality HI data cubes.
+
+
+Released processed data products
+#####################################
+The processed data products are of the most immediate scientific interest. Only processed data products which pass validation are considered for release. Specifically, we require the continuum multi-frequency synthesis (mfs) image to pass the validation outlined in "Validation of processed data products: Continuum". In that case, all processed data products are released for that beam of a given observation. It may be the case that the polarization or line products do not pass their validation (see respective sections in "Validation of processed data products"). In this case, these data products are flagged in the quality assessment columns of the VO tables (see User interfaces).
+
+The sections below provide a brief look at the released data products for continuum, polarization and line. The separate section "Data quality"  provides a view of the data quality of these released data products.
+
+Released continuum data products
+**********************************
+The main continuum data product is the multi-frequency synthesis continuum image. The resolution is better than 15′′×15′′/sin(δ) (requirement of validation). The median noise value is ~40 uJy/beam.
+
+The table containing all observation / beam combinations that pass continuum validation, along with all the metrics used in continuum validation (described in ”Validation of processed data products: Continuum”) can be exported using the VO infrastructure, more details are provided in section “User Interfaces".
+
+.. figure:: images/dr_year1_cont_spring.png
+  :align: center
+  :width: 400
+  :alt: Relative flux error
+  :name: cont_spring
+
+  The spring sky coverage of released beams based on the continuum validation.
+
+.. figure:: images/dr_year1_cont_fall.png
+  :align: center
+  :width: 400
+  :alt: Relative flux error
+  :name: cont_fall
+
+  The fall sky coverage of released beams based on the continuum validation.
+
+
+Released polarization data products
+************************************
+The polarized data products include a Stokes V multi-frequency synthesis image and Stokes Q&U cubes. The polarized data products are only released if the continuum validation is passed but the polarization products may not pass their own validation (see section "Validation of processed data products: Polarization"). The Stokes V images and Q/U cubes are validated separately, and their validation state is clearly given in the User interfaces.
+
+A table of all released beams with the line validation status (“G”ood, “O”kay, or “B”ad) for cubes 0-2 (given by the columns "cube?_qual"), plus the metrics used for the line validation (described in HI validation) can be exported using the VO infrastructure, more details are provided in section “User Interfaces”.
+
+
+.. figure:: images/dr_year1_QU_spring.png
+  :align: center
+  :width: 400
+  :alt: Relative flux error
+  :name: QU_spring
+
+  Spring sky view of the released QU cubes, color-coded by whether they pass validation or not.
+
+.. figure:: images/dr_year1_QU_fall.png
+  :align: center
+  :width: 400
+  :alt: Relative flux error
+  :name: QU_fall
+
+  Fall sky view of the released QU cubes, color-coded by whether they pass validation or not.
+
+.. figure:: images/dr_year1_V_spring.png
+  :align: center
+  :width: 400
+  :alt: Relative flux error
+  :name: V_spring
+
+  Spring sky view of the released Stokes V mfs images, color-coded by whether they pass validation or not.
+
+.. figure:: images/dr_year1_V_fall.png
+  :align: center
+  :width: 400
+  :alt: Relative flux error
+  :name: V_fall
+
+  Fall sky view of the released Stokes V mfs images, color-coded by whether they pass validation or not.
+
+Released line data products
+*****************************
+The released line data products include four dirty cubes and their associated dirty beam cubes. The three lowest frequency cubes (spectrally averaged by 3 channels) are validated independently, while the highest frequency, non-averaged cube (cube3) is not directly validated but generally follows the quality of the closest cube in frequency (cube2). The details of the validation are in "Validation of processed data products: HI".
+
+Table of all released beams with the line validation status (“G”ood, “O”kay, “B”ad, or “N”o cube) for cubes 0-2 (cube?_qual)  plus the metrics used for the line validation (described in HI validation) can be exported using the VO infrastructure, more details are provided in section “User Interfaces”.
+
+.. figure:: images/dr_year1_HIc2_spring.png
+  :align: center
+  :width: 400
+  :alt: Relative flux error
+  :name: HIc2_spring
+
+  Spring sky view of the released data for cube2, color-coded by status (Good, Okay, Bad).
+
+.. figure:: images/dr_year1_HIc2_fall.png
+  :align: center
+  :width: 400
+  :alt: Relative flux error
+  :name: HIc2_fall
+
+  Fall sky view of the released data for cube2, color-coded by status (Good, Okay, Bad).
+
+.. figure:: images/dr_year1_HIc1_spring.png
+  :align: center
+  :width: 400
+  :alt: Relative flux error
+  :name: HIc1_spring
+
+  Spring sky view of the released data for cube1, color-coded by status (Good, Okay, Bad).
+
+.. figure:: images/dr_year1_HIc1_fall.png
+  :align: center
+  :width: 400
+  :alt: Relative flux error
+  :name: HIc1_fall
+
+  Fall sky view of the released data for cube1, color-coded by status (Good, Okay, Bad).
+
+.. figure:: images/dr_year1_HIc0_spring.png
+  :align: center
+  :width: 400
+  :alt: Relative flux error
+  :name: HIc0_spring
+
+  Spring sky view of the released data for cube0, color-coded by status (Good, Okay, Bad).
+
+.. figure:: images/dr_year1_HIc0_fall.png
+  :align: center
+  :width: 400
+  :alt: Relative flux error
+  :name: HIc0_fall
+
+  Fall sky view of the released data for cube0, color-coded by status (Good, Okay, Bad).
