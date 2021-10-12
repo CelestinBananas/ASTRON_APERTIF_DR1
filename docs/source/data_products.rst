@@ -5,6 +5,45 @@ Available data products
 #########################
 Raw data Products
 ******************
+Raw observational data
+-----------------------
+The raw observational data is recorded in measurement-set (MS) format. A survey field observation consists of forty beams covering the field; with all dishes the size of this dataset is 4.6 TB. A set of calibration scans consists of 40 separate observations taken in succession. For each calibrator scan only one beam contains the calibrator. All other beams not containing the calibrator are discarded. These observations vary in between 3–5 minutes and the total datasize for a complete calibrator scan (all forty beams) is 64-106 GB. The calibrator observations are taken at a higher time resolution than the survey fields (10 vs. 30 seconds) to allow better RFI excision due to their shorter integration time. The raw data are stored in long-term storage at SurfSARA to enable future reprocessing with improvements to the Apercal pipeline.
+
+Inspection plots
+-------------------
+Upon ingest to ALTA, inspection plots showing various views of data quality are created. The majority of these plots show the behavior per compound beam, with different slices of the data to highlight different aspects of quality. Example inspection plots can be found here. These plots are\:
+
+* Amplitude(all): Amplitude across all beams, averaged over all parameters
+    * Amplitude f(time): Amplitude across all beams, concentric circles as a function of time inwards (start * to end)
+    * Amplitude f(antenna):  Amplitude across all beams, concentric circles as a function of antenna inwards (RT2 to RTD)
+    * Amplitude f(baseline): Amplitude across all beams, concentric circles as a function of baseline inwards (in MS order)
+    * Phase (all): Phase across all beams, averaged over all parameters
+    * Phase f(time): Phase across all beams, concentric circles as a function of time inwards (start to end)
+    * Phase f(antenna):  Phase across all beams, concentric circles as a function of antenna inwards (RT2 to RTD)
+    * Phase f(baseline): Phase across all beams, concentric circles as a function of baseline inwards (in MS order)
+    * Amplitude vs time: Baseline plot of amplitude as function of time, coloured by MS order of baselines
+    * Amplitude vs channel: Baseline plot of amplitude as function of channel, coloured by MS order of baselines
+    * Phase vs time: Baseline plot of phase as function of time, coloured by MS order of baselines
+    * Phase vs channel: Baseline plot of phase as function of channel, coloured by MS order of baselines
+    * Waterfall\: scaled amplitude : Waterfall plot of amplitude as a function of channel (x-axis) and time (y-axis),with fixed scaling
+    * Waterfall\: unscaled amplitude:  Waterfall plot of amplitude as a function of channel (x-axis) and time (y-axis), no scaling
+    * Waterfall\: scaled phase: Waterfall plot of phase as a function of channel (x-axis) and time (y-axis), fixed scale
+    * Waterfall: unscaled phase: Waterfall plot of phase as a function of channel (x-axis) and time (y-axis), no scaling
+
+In addition, there are plots for a single beam, either the central compound beam for a target observation or the compound beam containing a calibrator for calibrator observations showing a full view of the data. These plots are\:
+
+
+        * Beams XX: Waterfall plots of phase (upper right) and amplitude (lower left) for the XX polarization as a function of frequency (x-axis) and time (y-axis) for each baseline pair given by the antenna names (middle diagonal)
+        * Beams YY: Waterfall plots of phase (upper right) and amplitude (lower left) for the YY polarization as a function of frequency (x-axis) and time (y-axis) for each baseline pair given by the antenna names (middle diagonal)
+
+Processed data products
+************************
+The Apercal pipeline (see “Apercal overview and structure”) calibrates the data and produces final images and cubes per compound beam. All data products described below are for an individual compound beam, of which there are forty per observation. These data products are not primary-beam corrected; primary-beam images are provided separately (see the "Primary beam response" section, specifically “Released primary beam images”, and “User Interfaces”); these may be used for mosaicking or for correction of individual images.
+
+Processed data products are ingested back into ALTA on a per-beam basis, and in “Released processed data products” we motivate the choice to release data on a per-beam basis. Note that the release of a beam releases all processed data associated with that beam.
+
+An important note is that currently only the upper 150 MHz of the band is processed; thus the processed data products are produced over the range 1280-1430 MHz. Moreover, the first 12.5 MHz of data are flagged due to persistent RFI, therefore the resulting central frequency is 1361.25 MHz. The nominal bandwidth is then 137.5 MHz, but effectively it could be smaller due to additional RFI flagging. The (currently archived) data products are described below:
+
 
 Validation of data products
 ###########################
