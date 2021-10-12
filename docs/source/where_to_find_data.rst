@@ -118,7 +118,7 @@ The position of the targets can be visualized using the option skyplot in TOPCAT
  :alt: Relative flux error
  :name: VO_tap
 
-  TOPCAT menu bar for VO services. Click for a bigger image.
+ TOPCAT menu bar for VO services. Click for a bigger image.
 
 .. figure:: images/VO_TAP_astron_fig8.png
  :align: center
@@ -126,7 +126,7 @@ The position of the targets can be visualized using the option skyplot in TOPCAT
  :alt: Relative flux error
  :name: VO_tap_astron
 
-  TOPCAT TAP service query form. Click for a bigger image.
+ TOPCAT TAP service query form. Click for a bigger image.
 
 .. figure:: images/VO_tap_apertif_dr1_fig9.png
  :align: center
@@ -134,7 +134,7 @@ The position of the targets can be visualized using the option skyplot in TOPCAT
  :alt: Relative flux error
  :name: VO_tap_dr1
 
-  TOPCAT menu bar for VO services. Click for a bigger image.
+ TOPCAT menu bar for VO services. Click for a bigger image.
 
 Another useful way to inspect the Apertif DR1 data collection, but also other data collections exposed via the ASTRON-VO, is the ivoa-obscore table. The same selection as before can be used (:numref:`VO_tap_dr1`) but instead of selecting Apertif_dr1 tables, the table ivoa.obscore is to be selected. In this way it is possible to glance over all the data collections exposed via the ASTRON-VO. This might be useful for instance to enable multi-wavelength science exploring LOTSS and Apertif DR1 data or, as mentioned in the case of the ADQL query, to visualize multiple data collections at once.
 
@@ -146,7 +146,7 @@ Having ALADIN open, and once you are satisfied with the resulting table, it can 
  :alt: Relative flux error
  :name: topcat_to_aladin
 
-  How to transfer the TOPCAT query results to ALADIN. Click for a bigger image.
+ How to transfer the TOPCAT query results to ALADIN. Click for a bigger image.
 
 Access via ALADIN
 ********************
@@ -163,7 +163,7 @@ Open ALADIN and on the left panel for SIAP: select Others > SIA2 > astron.nl > T
  :alt: Relative flux error
  :name: coll_tap
 
-  ALADIN display panel. Click for a bigger image.
+ ALADIN display panel. Click for a bigger image.
 
 .. figure:: images/server_selector_fig12.png
  :align: center
@@ -171,7 +171,7 @@ Open ALADIN and on the left panel for SIAP: select Others > SIA2 > astron.nl > T
  :alt: Relative flux error
  :name: server_select
 
-  ALADIN server selector panel for SIAP. Click for a bigger image.
+ ALADIN server selector panel for SIAP. Click for a bigger image.
 
 .. figure:: images/search_tap_aladin_fig13.png
   :align: center
@@ -189,7 +189,7 @@ After loading, the data collection catalogues can be plotted on the main panel b
  :alt: Relative flux error
  :name: cat_aladin_siap
 
-   Example of data collection selection via SIAP in ALADIN. Click for a bigger image.
+ Example of data collection selection via SIAP in ALADIN. Click for a bigger image.
 
 .. figure:: images/catalogue_aladin_tap_fig15.png
   :align: center
@@ -226,7 +226,7 @@ These data products are stored on tape and not directly accessible for download,
   :alt: Relative flux error
   :name: vis_info
 
-   Visibility data access page.
+  Visibility data access page.
 
  .. figure:: images/helpdesk_req_vis_fig18.png
    :align: center
