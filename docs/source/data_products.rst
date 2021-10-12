@@ -1,5 +1,11 @@
 Data Products
 ===============
+
+Available data products
+#########################
+Raw data Products
+******************
+
 Validation of data products
 ###########################
 Continuum
@@ -66,7 +72,7 @@ To assess the agreement with the NVSS we made mosaics of the full field of view 
 
 :numref:`flux_ratio_2` captures the comparison of the individual mosaics with the NVSS. For each ObsID the median flux ratio NVSS / Apertif is given. On average the Apertif flux scale is 3% above the NVSS flux scale for these mosaics with an rms of 4%. If the two most discrepant ObsIDs are omitted (191207035 and 191227014) the rms reduces to 2%. :numref:`flux_cmp_2` illustrates the agreement between the Apertif and NVSS flux scale for ObsID 200102012. Since the observing frequency of the mosaic is 1360 MHz as opposed to the 1400 MHz of NVSS ~2% of the flux difference can be accounted for by spectral index effects (assuming an average spectral index of -0.7) which were not taken into account.
 
-.. csv-table::
+.. csv-table:: Median flux ratio NVSS/Apertif for each ObsID
   :align: center
   :header: "ObsID", "Median Flux Ratio"
   :widths: 20, 20
