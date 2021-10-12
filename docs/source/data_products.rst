@@ -57,6 +57,7 @@ An example of two observations (ObsID 200106010 and 190909049, observed at 06.01
   :align: center
   :width: 400
   :alt: Relative flux error
+  :name: flux_cmp_1
 
   Relative flux difference between the sources in a mosaic of ObsID 200106010 and a mosaic of ObsID 190909049 as a function of their flux measured in ObsID 200106010.
 
