@@ -344,3 +344,18 @@ The ADQL form is another option, and below we provide an example query that also
   join  apertif_dr1.flux_cal_visibilities flux_cal on data.obsid=flux_cal.used_for and data.beam_number=flux_cal.beam
   join apertif_dr1.pol_cal_visibilities pol_cal on data.obsid=pol_cal.used_for and data.beam_number=pol_cal.beam
   order by obsid
+
+Data Usage Policy
+####################
+
+Papers making use of this data should include the following acknowledgement:
+
+This work makes use of data from the Apertif system installed at the Westerbork Synthesis Radio Telescope owned by ASTRON. ASTRON, the Netherlands Institute for Radio Astronomy, is an institute of the Dutch Research Council (“De Nederlandse Organisatie voor Wetenschappelijk Onderzoek, NWO).
+
+In addition, they should include the Apertif DR1 PID:
+
+http://hdl.handle.net/21.12136/B014022C-978B-40F6-96C6-1A3B1F4A3DB0
+
+and cite the imaging survey data release paper. This is not yet available but should be soon. Until then, it can be referenced as:
+
+Adams, E. A. K., et al. "First release of Apertif imaging survey data", in prep.
