@@ -15,3 +15,4 @@ Contents
    data_products
    future
    where_to_find_data
+   test_rst
