@@ -48,19 +48,19 @@ An important note is that currently only the upper 150 MHz of the band is proces
 
   The crosscal module portion of Apercal produces calibration tables that can be applied to the original data to reproduce the cross calibration. These tables are in standard CASA/MS format and a summary of all the calibration tables is provided in :numref:`cal_table` , where 3CFFF refers to a flux/bandpass calibrator (namely, 3C147 or 3C196; occasionally 3C295) and 3CPPP to a polarization calibrator (namely, 3C286 or 3C138).
 
-.. csv-table:: Calibration tables and naming scheme.
-  :align: center
-  :header: "Table description", 	"Table name"
-  :widths: 20, 20
-  :name: cal_table
+  .. csv-table:: Calibration tables and naming scheme.
+    :align: center
+    :header: "Table description", 	"Table name"
+    :widths: 20, 20
+    :name: cal_table
 
-  Global delays, 3CFFF.K
-  Bandpass solutions, 3CFFF.Bscan
-  "Intermediary, initial phase solutions", 3CFFF.G0ph
-  Final complex gain solutions, 	3CFFF.G1ap
-  Crosshand delay, 	3CPPP.Kcross
-  Leakage terms, 	3CFFF.Df
-  XY phase offset, 	3CPPP.Xf
+    Global delays, 3CFFF.K
+    Bandpass solutions, 3CFFF.Bscan
+    "Intermediary, initial phase solutions", 3CFFF.G0ph
+    Final complex gain solutions, 	3CFFF.G1ap
+    Crosshand delay, 	3CPPP.Kcross
+    Leakage terms, 	3CFFF.Df
+    XY phase offset, 	3CPPP.Xf
 
 * **Full time, Stokes and spectral-resolution calibrated visibility data**
 
