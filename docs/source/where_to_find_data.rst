@@ -57,7 +57,7 @@ In the column Related products another link connects to a page containing a list
 
    Links of ancillary data products related to the target of interest. Click for a bigger image
 
- The columns shown in Figure 3 are the most informative for the astronomers (e.g. position, observing frequency, observing date, quality assessment, format etc), please note that more columns are available but not displayed here. The complete set of columns can be visualized via topcat as described below or using More output fields selection button in the search query. Querying the released data is also possible using e.g. TOPCAT using TAP. Via the TAP protocol, it is possible to query the registry in a more flexible way using an enriched SQL syntax called ADQL. An example is given in Figure 5: click the link indicated with the red ellipse on the left panel Try ADQL and place your ADQL query on the query form.
+ The columns shown in Figure 3 are the most informative for the astronomers (e.g. position, observing frequency, observing date, quality assessment, format etc), please note that more columns are available but not displayed here. The complete set of columns can be visualized via topcat as described below or using More output fields selection button in the search query. Querying the released data is also possible using e.g. TOPCAT using TAP. Via the TAP protocol, it is possible to query the registry in a more flexible way using an enriched SQL syntax called ADQL. An example is given in :numref:`ADQL_query`: click the link indicated with the red ellipse on the left panel Try ADQL and place your ADQL query on the query form.
 
 .. figure:: images/ADQL_query_fig5.png
  :align: center
@@ -67,7 +67,7 @@ In the column Related products another link connects to a page containing a list
 
   ADQL query form.
 
-The table names to use in the query form of Figure 5, are summarized in :numref:`ADQL_table`. The URL  for the query is then: https://vo.astron.nl/apertif_dr1/q/{Table name}/form (e.g. http://dop457.astron.nl:5555/apertif_dr1/q/apertif_dr1_continuum_images/form}.
+The table names to use in the query form of :numref:`ADQL_query`, are summarized in :numref:`ADQL_table`. The URL  for the query is then: https://vo.astron.nl/apertif_dr1/q/{Table name}/form (e.g. http://dop457.astron.nl:5555/apertif_dr1/q/apertif_dr1_continuum_images/form}.
 
 It is possible to query all the available dataproducts at once by using the table ivoa.obscore and by appending to the ADQL statement "where obs_collection=" it is possible to limit the search to the apertif_dr1 only.
 
@@ -94,7 +94,7 @@ Send via SAMP
 ---------------
 With TOPCAT opened, and once you are satisfied with the output of the cone search in the Astron VO webform, click the grey button “Send via SAMP” as shown on the top of the output list of  Figure 3. Authorize the connection and wait until the download is completed.
 
-Once completed, the catalogue will be visible in the left panel of TOPCAT (Table List). Click on the new entry as shown by the arrow in Figure 6. At this point the table browser will open showing the content of the DACHS results (PLACE HOLDER  use DR1 in selection).  From here any TOPCAT tool can be used for further inspection and analysis of the results. Alternatively the table can be saved in various formats and used locally with other programs (e.g. python scripts etc).
+Once completed, the catalogue will be visible in the left panel of TOPCAT (Table List). Click on the new entry as shown by the arrow in :numref:`topcat_list`. At this point the table browser will open showing the content of the DACHS results (PLACE HOLDER  use DR1 in selection).  From here any TOPCAT tool can be used for further inspection and analysis of the results. Alternatively the table can be saved in various formats and used locally with other programs (e.g. python scripts etc).
 
 .. figure:: images/topcat_list_fig6.png
  :align: center
@@ -106,9 +106,9 @@ Once completed, the catalogue will be visible in the left panel of TOPCAT (Table
 
 VO Table Acess Protocol (TAP)
 ---------------------------------
-From the TOPCAT menu bar, select VO and in the drop down, select Table Access Protocol (TAP) as shown by the red arrow in Figure 7.
+From the TOPCAT menu bar, select VO and in the drop down, select Table Access Protocol (TAP) as shown by the red arrow in :numref:`VO_tap`.
 
-This will open the Table Access Query window where the ASTRON VO TAP server is listed. Select it and click on Use Service at the bottom of the window (Figure 8). Another tab will open showing the Apertif DR1 data collection. Select one, e.g. continuum image, and enter a query command in the bottom panel, an example of which is indicated by the red arrow in Figure 9. Submit the query using Run Query. This will show the resulting table in the Table list view shown before in Figure 6. From here, any TOPCAT tool can again be used. As mentioned in the previous section, the query result in vo.astron.nl will display a subset of the columns of the Apertif DR1 table (e.g. position, observing frequency, observing date, quality assessment, format etc). The complete set of columns (e.g. pipeline version, wcs references etc) belonging to each data collection of the Apertif DR1 can be explored using the option described in this section.
+This will open the Table Access Query window where the ASTRON VO TAP server is listed. Select it and click on Use Service at the bottom of the window (:numref:`VO_tap_astron`). Another tab will open showing the Apertif DR1 data collection. Select one, e.g. continuum image, and enter a query command in the bottom panel, an example of which is indicated by the red arrow in :numref:`VO_tap_dr1`. Submit the query using Run Query. This will show the resulting table in the Table list view shown before in :numref:`topcat_list`. From here, any TOPCAT tool can again be used. As mentioned in the previous section, the query result in vo.astron.nl will display a subset of the columns of the Apertif DR1 table (e.g. position, observing frequency, observing date, quality assessment, format etc). The complete set of columns (e.g. pipeline version, wcs references etc) belonging to each data collection of the Apertif DR1 can be explored using the option described in this section.
 
 The position of the targets can be visualized using the option skyplot in TOPCAT, once the search query has been sent via SAMP or TAP as described in this section.
 
@@ -136,9 +136,9 @@ The position of the targets can be visualized using the option skyplot in TOPCAT
 
   TOPCAT menu bar for VO services. Click for a bigger image.
 
-Another useful way to inspect the Apertif DR1 data collection, but also other data collections exposed via the ASTRON-VO, is the ivoa-obscore table. The same selection as before can be used (Figure 9) but instead of selecting Apertif_dr1 tables, the table ivoa.obscore is to be selected. In this way it is possible to glance over all the data collections exposed via the ASTRON-VO. This might be useful for instance to enable multi-wavelength science exploring LOTSS and Apertif DR1 data or, as mentioned in the case of the ADQL query, to visualize multiple data collections at once.
+Another useful way to inspect the Apertif DR1 data collection, but also other data collections exposed via the ASTRON-VO, is the ivoa-obscore table. The same selection as before can be used (:numref:`VO_tap_dr1`) but instead of selecting Apertif_dr1 tables, the table ivoa.obscore is to be selected. In this way it is possible to glance over all the data collections exposed via the ASTRON-VO. This might be useful for instance to enable multi-wavelength science exploring LOTSS and Apertif DR1 data or, as mentioned in the case of the ADQL query, to visualize multiple data collections at once.
 
-Having ALADIN open, and once you are satisfied with the resulting table, it can be sent to ALADIN following the instructions of Figure 10.
+Having ALADIN open, and once you are satisfied with the resulting table, it can be sent to ALADIN following the instructions of :numref:`topcat_to_aladin`.
 
 .. figure:: images/topcat_to_aladin_fig10.png
  :align: center
@@ -155,7 +155,7 @@ Catalogues
 
 The Apertif DR1 VO data collection can also be discovered directly via ALADIN either via simple image access protocol (SIAP) or tabular access protocol (TAP). The examples shown here require the desktop version of ALADIN.
 
-Open ALADIN and on the left panel for SIAP: select Others > SIA2 > astron.nl > The VO @ASTRON SIAP Version 2. Alternatively for TAP select Others > TAP > astron.nl > The VO @ASTRON TAP service (Figure 11). A pop-up window will open. Click load, and enter a query using the Server selector (Figure 12) or TAP access with astron.nl/tap (Figure 13) to select the target of interest for SIAP and TAP respectively.
+Open ALADIN and on the left panel for SIAP: select Others > SIA2 > astron.nl > The VO @ASTRON SIAP Version 2. Alternatively for TAP select Others > TAP > astron.nl > The VO @ASTRON TAP service (:numref:`coll_tap`). A pop-up window will open. Click load, and enter a query using the Server selector (:numref:`server_select`) or TAP access with astron.nl/tap (:numref:`search_tap`) to select the target of interest for SIAP and TAP respectively.
 
 .. figure:: images/collection_siap2_tap_fig11.png
  :align: center
@@ -174,12 +174,12 @@ Open ALADIN and on the left panel for SIAP: select Others > SIA2 > astron.nl > T
   ALADIN server selector panel for SIAP. Click for a bigger image.
 
 .. figure:: images/search_tap_aladin_fig13.png
-:align: center
-:width: 400
-:alt: Relative flux error
-:name: search_tap
+  :align: center
+  :width: 400
+  :alt: Relative flux error
+  :name: search_tap
 
-ALADIN TAP access panel. Click for a bigger image.
+  ALADIN TAP access panel. Click for a bigger image.
 
 After loading, the data collection catalogues can be plotted on the main panel by selecting them first on the right panel (e.g. highlighted in blue in Figures 14 and 15) and then by selecting the regions of interest on the bottom panel as shown in Figures 14 and 15. From here the usual functionality of ALADIN can be used.
 
@@ -202,7 +202,7 @@ After loading, the data collection catalogues can be plotted on the main panel b
 
 Images
 --------
-Downloading images or cubes in ALADIN is also possible (see Figure 16). The user will need to click on the url-link in the column access_url of the bottom panel. Then, once the image is loaded, click on the right panel as shown in Figure 16. From here the usual functionality of ALADIN can be used.
+Downloading images or cubes in ALADIN is also possible (see :numref:`im_load_al`). The user will need to click on the url-link in the column access_url of the bottom panel. Then, once the image is loaded, click on the right panel as shown in :numref:`im_load_al`. From here the usual functionality of ALADIN can be used.
 
 .. figure:: images/image_load_aladin_fig16.png
   :align: center
@@ -216,9 +216,9 @@ Access to raw and calibrated visibilities
 **********************************************
 Raw observations and calibrated visibilities can be discovered in the data collection as shown in Figure 1, using the ASTRON-VO query form (Figure 2) or via TAP using TOPCAT.
 
-In addition, the query results via ASTRON VO for continuum images, polarization images/cubes, and HI spectral cubes provides a link to ancillary data (Figure 4), including raw and calibrated visibilities.
+In addition, the query results via ASTRON VO for continuum images, polarization images/cubes, and HI spectral cubes provides a link to ancillary data (:numref:`rel_prod`), including raw and calibrated visibilities.
 
-These data products are stored on tape and not directly accessible for download, but until further notice access can be requested via the helpdesk (Figure 19). The request will be processed on a best effort basis. Within the same request also the calibration tables can be made available (see "Available data products").
+These data products are stored on tape and not directly accessible for download, but until further notice access can be requested via the helpdesk (:numref:`helpdesk_req`). The request will be processed on a best effort basis. Within the same request also the calibration tables can be made available (see "Available data products").
 
 .. figure:: images/vis_info_fig17.png
   :align: center
@@ -239,7 +239,7 @@ These data products are stored on tape and not directly accessible for download,
 Primary beam images
 ---------------------
 
-The continuum images, HI spectral cubes and V images and Q&U cubes are not primary beam corrected. Primary-beam images may be used for mosaicking or for correction of individual images. More information about the primary beam images for Apertif, including their derivation, can be found in the "Overview of primary beam shapes for Apertif."  Specifically, "Released primary beam images" describes the primary beam images initially made available as part of this data release. As for other ancillary data products, primary beam images can be found in the query results following the links in the column Related products (Figure 20) for continuum images, HI spectral cubes or polarization cubes.
+The continuum images, HI spectral cubes and V images and Q&U cubes are not primary beam corrected. Primary-beam images may be used for mosaicking or for correction of individual images. More information about the primary beam images for Apertif, including their derivation, can be found in the "Overview of primary beam shapes for Apertif."  Specifically, "Released primary beam images" describes the primary beam images initially made available as part of this data release. As for other ancillary data products, primary beam images can be found in the query results following the links in the column Related products (:numref:`ancillary_data`) for continuum images, HI spectral cubes or polarization cubes.
 
 .. figure:: images/ancillary-data_fig19.png
   :align: center
@@ -334,7 +334,7 @@ There are multiple ways to export a catalog of the various data products of the 
 
 TOPCAT and the pyvo interface demonstrated above also provide functionality for exporting machine-readable files.
 
-The ADQL form is another option, and below we provide an example query that also provides information about the calibrators used for each beam. This query is specific to the `continuum_images` data product but can be adapted to other (beam-based, processed) data products by replacing the table name, e.g., for polarization cubes/images use `pol_cubes` (see Table 1 for a full list of the available tables).
+The ADQL form is another option, and below we provide an example query that also provides information about the calibrators used for each beam. This query is specific to the `continuum_images` data product but can be adapted to other (beam-based, processed) data products by replacing the table name, e.g., for polarization cubes/images use `pol_cubes` (see :numref:`ADQL_table` for a full list of the available tables).
 
 .. code-block:: SQL
 
