@@ -15,13 +15,13 @@ All raw observational data from the imaging surveys through the first year of su
 
   The sky coverage of released observations, with the full four-year survey footprint shown for reference. The color coding indicates the version of the pipeline used for processing (see "Apercal versions applicable to the release" for details).
 
-  .. figure:: images/dr_year1_apercal_processing_ames.png
-    :align: center
-    :width: 400
-    :alt: Relative flux error
-    :name: dr_year1_apercal_processing_ames
+.. figure:: images/dr_year1_apercal_processing_ames.png
+  :align: center
+  :width: 400
+  :alt: Relative flux error
+  :name: dr_year1_apercal_processing_ames
 
-     A view of the processing for medium-deep fields with repeat visits. The observations are ordered in time-order and the color code refers to the same processing as for the figure above.
+   A view of the processing for medium-deep fields with repeat visits. The observations are ordered in time-order and the color code refers to the same processing as for the figure above.
 
 Notes on the data quality/processing  for specific observations can be found here.
 
