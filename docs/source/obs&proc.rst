@@ -305,7 +305,7 @@ In the following, we give more details on each of the individual modules.
 
   In order to guarantee a smooth convergence of the self-calibration skymodel the two additional thresholds Tdr and Tn set limits for the maximum dynamic range achievable in an image without reconstruction and the adaptation to image artefacts, respectively. The dynamic range threshold within a cycle is defined by the number of the current major cycle m, the initial dynamic range DRi and a factor defining how fast the threshold should increase DR0 such as
 
-  .. math:`T_{dr} = I_{max}  /  (DR_i  * DR_0^m)`
+  ..:math:`T_{dr} = I_{max}  /  (DR_i  * DR_0^m)`
 
   where ..:math:`I_{max}` is the maximum pixel value in the residual image of the previous cycle. The parameter DRi is dependent on the level of the first major sidelobe in the dirty beam. The ratio between the maximum and this value gives the maximum dynamic range by which an image can be cleaned before another cycle of image reconstruction needs to be performed.
 
@@ -405,7 +405,7 @@ During the course of survey operations, improvements were made to the Apercal pi
 * **Apercal_150_ACF_C-D (RTC-RTD flagging):**
 
     The RTC-RTD baseline has an elevated (noise) response level, related to the introduction of the synch-optics boards (see System notes). In order to avoid bias in the calibration / flux scale, this baseline is flagged.
-    
+
 * **Apercal_150_ACF_C-D_BPF (Bandpass-phase flagging):**
 
     An additional internal QA check; if the phases of the bandpass solution have too large a rms, that dish is flagged and the cross-calibration is carried out again.
