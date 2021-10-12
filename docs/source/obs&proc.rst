@@ -238,7 +238,7 @@ In the following, we give more details on each of the individual modules.
 Apercal pipeline modules
 *************************
 
-* **AUTOCAL**
+AUTOCAL
 ----------------
   When a new observation is uploaded to the Apertif Long Term Archive (ALTA), AUTOCAL automatically retrieves information about the target, flux and polarisation calibrator and triggers the start of the pipeline. Operating as a cron job, AUTOCAL first identifies a given observation as a target and then searches the Apertif Task DataBase (ATDB) for calibrators before and after.
 
@@ -252,8 +252,8 @@ PREPARE
 
   A minimum of a target dataset and a flux calibrator need to be present for this step to be successful. This condition ensures that, if no flux calibrator is available, the execution of the pipeline is stopped. On the other hand, the pipeline will continue when a polarised calibrator is not available. In this case, the polarisation calibration within the CROSSCAL module is omitted and no polarisation imaging is performed. We want to note that for pipeline runs using the automatic trigger via AUTOCAL a missing polarised calibrator is diagnosed as a failed observation and stops the pipeline.
 
-* **PREFLAG**
-
+PREFLAG
+-------------
   The PREFLAG module handles all pre-calibration flagging of the data. It can be separated into three different operations: The flagging of data with issues known a priori, additional manual flagging, and automatic flagging routines to identify and mitigate spurious radio frequency interference (RFI). The first two operations use the drive-casa python wrapper to parse commands to CASA while the last one uses the AOFlagger routines.
 
   The subroutines for a priori known issues cover three distinct operations: First the data is checked for shadowing effects, where the aperture of one dish is blocked by another. The next step is a mitigation of the effect of the steep bandpass edges of the individual subbands of the Apertif system. The first two and last channel of each 64 channel subband is flagged.
@@ -262,8 +262,8 @@ PREPARE
 
   The last step of the module uses the AOFlagger (Offringa+ 2012) routines to automatically identify and flag any unknown and previously not flagged RFI in the calibrator and target datasets. A custom flagging strategy was designed which suits both, short calibrator and long target field observations.
 
-* **CROSSCAL**
-
+CROSSCAL
+------------
   During the cross calibration step, an astronomical point-like known reference source (a calibrator) is used to derive the calibration solutions, which are then transferred to an unknown target field.
 
   The current calibration strategy encompasses a short flux and polarisation calibrator observation in the centre of each individual beam before or after a target field observation has been executed.
@@ -274,14 +274,14 @@ PREPARE
 
 
 
-* **CONVERT**
-
+CONVERT
+--------------
   Since MIRIAD is not able to access the Measurement Set (MS)-format native to CASA, we need to convert the file format before doing any further reduction. Unfortunately a task for a direct conversion from MS to MIRIAD format is not available, so that we have to first convert to the UV-FITS standard and from there to MIRIAD. For this purpose we use the CASA task exportuvfits followed by the MIRIAD routine fits.
 
 
 
-* **SELFCAL**
-
+SELFCAL
+----------
   Self-calibration is a standard procedure in radio interferometric data reduction to enhance the dynamic range of images. Small changes in the processing of the signals in the receiver electronics (e.g. temperature changes) and ionospheric and tropospheric variations of the Earth's atmosphere cause dampening of the received amplitudes and small delay variations, respectively, over the time of the target observations. These usually slowly changing variations cannot be compensated by the bracketing calibrator observations and therefore need self-calibration.
 
   The task of the SELFCAL module is to solve for the antenna and feed time based variations of the target data within a self-regulating algorithm using the self-calibration technique. To guarantee the stability of the self-calibration process and the processing within a reasonable time frame, several preliminary steps are executed within SELFCAL before the actual self-calibration starts.
@@ -336,28 +336,28 @@ PREPARE
 
 
 
-* **CONTINUUM**
-
+CONTINUUM
+---------------
   The CONTINUUM module performs two different tasks to generate final deep continuum Stokes I images. First it generates a deep multi-frequency image using the mfclean task in MIRIAD and secondly several individual images spanning narrower frequency ranges over the full bandwidth using the task clean are produced. The purpose of this is to generate an as deep as possible total intensity image with the maximum possible resolution (given by the highest frequency) and in addition derive reliable spectral indices and curvatures for as many sources as possible. In fact multi-frequency cleaning generates these images already, but their values are only reliable in cases of high signal-to-noise ratios. For both imaging steps we use a uniform weighting to acquire the maximum possible resolution on the order of 12’’. Images usually have a size of 3073x3073 pixels with a pixel size of 4 arcseconds, which allows the imaging and cleaning of any sources up to the first sidelobe level of the primary beam response in order to minimise artefacts.
 
   Cleaning and masking iterations are in both cases continued until the theoretical noise limit has been reached. Masking and validation of all continuum images is performed in the same way as described for the SELFCAL module.
 
-* **LINE**
-
+LINE
+-----
   The LINE module first applies the derived self-calibration solutions to the non-averaged data. This is performed using the MIRIAD task gpcopy. It automatically takes care of the different frequency resolution of the two datasets by interpolation.
 
   The HI-line imaging is the most computing intensive task in the Apertif data reduction, so that several endeavours have been undertaken to optimise its performance. For a better handling of the data and the image cubes imaging is performed by generating eight individual cubes over the 300 MHz of bandwidth with a small amount of overlap in frequency. The overlap is necessary to avoid splitting the detected line emission of individual objects between two adjacent image cubes. In order to improve sensitivity and save processing time and disc space, data between 1130 MHz and 1416 MHz are averaged in frequency by binning three channels together. The data at the highest frequencies which features the Galactic neutral hydrogen and small galaxies in the nearby Universe retains its full spectral resolution of 12.2 kHz.
 
   In order to generate image cubes containing only HI-line emission the continuum has to be subtracted. Several different approaches are possible here: the fitting of baselines to the amplitude of the data followed by subtraction, the subtraction of constant fluxes over frequency in the image domain and the direct subtraction of a continuum clean component model from the (u,v)-data. The best performance in terms of time consumption was achieved with the latter method, so that we decided to use this in Apercal. For this subtraction the final clean model of the CONTINUUM module is used.
 
-  Finally the actual images are produced. MIRIAD does not account for the position dependence of sources situated outside of the pointing centre for large fractional bandwidth, if executed in line imaging mode. Therefore, we have to generate an image for each individual frequency and combine the final images into a cube. Since imaging of individual channels is very computing intensive, but also the imaging process for each individual channel is independent from another we optimised this step by implementing an OpenMP support with the python pymp library1.
+  Finally the actual images are produced. MIRIAD does not account for the position dependence of sources situated outside of the pointing centre for large fractional bandwidth, if executed in line imaging mode. Therefore, we have to generate an image for each individual frequency and combine the final images into a cube. Since imaging of individual channels is very computing intensive, but also the imaging process for each individual channel is independent from another we optimised this step by implementing an OpenMP support with the python pymp library [#]_.
 
-  1 https://github.com/classner/pymp
+  ..[#] https://github.com/classner/pymp
 
 
 
-* **POLARISATION**
-
+POLARISATION
+------------------
   Polarisation imaging is performed in Stokes Q, U and V. Q and U fluxes from astronomical sources exhibit a sinusoidal dependence of the square of the observed wavelength. In addition, Stokes Q, U and V fluxes can have negative values in contrast to Stokes I, which needs to be positive in all cases. These effects would lead to bandwidth depolarisation in case of multi-frequency imaging of Stokes Q and U over our full 300 MHz bandwidth. Therefore, we image Stokes Q and U as cubes, using the same method as described for the LINE module, where one image is generated for a bandwidth of 6.25 MHz. This mitigates the effect of bandwidth depolarisation for most astronomical sources. In addition, this method allows the usage of the Rotation Measure Synthesis technique in post-processing, so that the linear polarisation properties of the detected sources can be analysed in more detail than with the standard methods, which suffers from bandwidth depolarisation effects. Typical reachable Faraday Depth are still on the oder of several thousands, so that the polarised emission of nearly all astronomical sources is still recoverable with these specifications. Spatial resolution of the Stokes Q and U cubes is slightly lower (on the order of 15 arcseconds) in comparison to the continuum images.
 
   Stokes V is representing the circular polarisation, which does not show any sinusoidal behaviour. Due to this fact and since the circular polarised sky is very faint, we perform a multi-frequency synthesis for imaging Stokes V. This also allows to maximise the sensitivity of the produced images to detect possible circular polarised sources.
@@ -366,8 +366,8 @@ PREPARE
 
 
 
-* **MOSAIC**
-
+MOSAIC
+-----------
   Currently we are not producing mosaics of the calibrated data during Apercal runs for the data release, but for reasons of completeness we explain the currently available mosaicking routines in the following. The mosaicking routines are independently implemented in order to address features specific to Apertif, namely varying primary beam responses for the different beams (see "Overview of primary beam shapes for Apertif") and the ability to include correlated noise.
 
   Once all data of an observation have been processed through the CONTINUUM, LINE and POLARISATION modules, the MOSAIC module is executed to generate a combined image of all beams of one observation taking into account the response of each compound beam. Images are regridded to a common grid centred on the central beam of the observation and then corrected for the Apertif compound beam response. The compound beam response has been characterised using drift scans of a strong astronomical source over the whole field of view of the Apertif Phased Array Feed (see Compound beam shape section). The different beams of one observation have slightly varying synthesised beam sizes due to different flagging of the data, so that all input images are convolved to the largest common beam.
@@ -380,8 +380,8 @@ PREPARE
 
 
 
-* **TRANSFER**
-
+TRANSFER
+--------------
   This module converts the self-calibrated MIRIAD data to more standard UVFITS format. Similar to LINE it applies the phase and, if available, amplitude self-calibration solutions to the non-averaged cross-calibrated data automatically before conversion. The calibrated visibility data, along with calibration tables and fits images/cubes, are then ready for archive ingest.
 
 Versions applicable to data release
