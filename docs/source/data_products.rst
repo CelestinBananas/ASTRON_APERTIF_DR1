@@ -70,16 +70,16 @@ An important note is that currently only the upper 150 MHz of the band is proces
 * Line and dirty beam cubes
   Four line cubes over a set of different frequency ranges are produced. :numref:`cube_params` summarizes the covered frequency ranges and provides the corresponding redshift range for HI. The lowest redshift cube is produced at full spectral resolution while other cubes are produced with a 3-channel averaging. These cubes have a spatial extent of 1.1°×1.1°(661×661 pixels, with 6′′/pixel). As the Apercal pipeline does not provide source finding or cleaning of the line cubes, corresponding dirty beam cubes, with twice the spatial coverage, are also archived to allow offline cleaning of source emission.
 
-  .. csv-table:: Frequency/velocity coverage and resolution for all line cubes. Velocities use the optical definition and velocity resolutions are for the center frequency/velocity of each cube.
-    :align: center
-    :header: "Cube", 	"Frequency Range MHz", 	"Velocity Range kms", 	"Redshift range", 	"Frequency Resolution kHz", "Velocity Resolution kms"
-    :widths: 20, 20, 20, 20, 20, 20
-    :name: cube_params
+.. csv-table:: Frequency/velocity coverage and resolution for all line cubes. Velocities use the optical definition and velocity resolutions are for the center frequency/velocity of each cube.
+  :align: center
+  :header: "Cube", 	"Frequency Range MHz", 	"Velocity Range kms", 	"Redshift range", 	"Frequency Resolution kHz", "Velocity Resolution kms"
+  :widths: 20, 20, 20, 20, 20, 20
+  :name: cube_params
 
-    Cube0, 	 1292.5 -- 1337.1, 	 18110 -- 28226, 	 0.062 -- 0.099, 	 36.6, 	 8.3
-    Cube1, 	 1333.1 -- 1377.7, 	 9155 -- 19005, 	 0.031 -- 0.065, 	 36.6, 	 8.1
-    Cube2, 	 1373.8 -- 1418.4, 	 424 -- 10005, 	0.001 -- 0.034, 	 36.6, 	 7.9
-    Cube3, 	 1414.5 -- 1429.3, 	 -1873 -- 1250, 	 0 -- 0.004, 	 12.2,   2.6
+  Cube0, 	 1292.5 -- 1337.1, 	 18110 -- 28226, 	 0.062 -- 0.099, 	 36.6, 	 8.3
+  Cube1, 	 1333.1 -- 1377.7, 	 9155 -- 19005, 	 0.031 -- 0.065, 	 36.6, 	 8.1
+  Cube2, 	 1373.8 -- 1418.4, 	 424 -- 10005, 	0.001 -- 0.034, 	 36.6, 	 7.9
+  Cube3, 	 1414.5 -- 1429.3, 	 -1873 -- 1250, 	 0 -- 0.004, 	 12.2,   2.6
 
 A summary of all the archived data products and their sizes (per beam and for a complete observation) are provided in :numref:`archived_data` :
 
