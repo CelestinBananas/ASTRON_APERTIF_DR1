@@ -31,6 +31,6 @@ numfig =True
 # -- Options for HTML output
 
 html_theme = 'sphinx_rtd_theme'
-
+html_logo = 'content/Apertif_logo.png'
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
