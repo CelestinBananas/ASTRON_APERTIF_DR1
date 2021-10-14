@@ -16,4 +16,3 @@ Contents
    known_issues
    future
    where_to_find_data
-   test_rst
