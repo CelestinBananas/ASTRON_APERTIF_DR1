@@ -11,7 +11,7 @@ The raw observational data is recorded in measurement-set (MS) format. A survey 
 
 Inspection plots
 -------------------
-Upon ingest to ALTA, inspection plots showing various views of data quality are created. The majority of these plots show the behavior per compound beam, with different slices of the data to highlight different aspects of quality. Example inspection plots can be found ` <https://alta.astron.nl/science/inspectionplots/190411002>`_. These plots are\:
+Upon ingest to ALTA, inspection plots showing various views of data quality are created. The majority of these plots show the behavior per compound beam, with different slices of the data to highlight different aspects of quality. Example inspection plots can be found `here <https://alta.astron.nl/science/inspectionplots/190411002>`_. These plots are\:
 
     * Amplitude(all): Amplitude across all beams, averaged over all parameters
     * Amplitude f(time): Amplitude across all beams, concentric circles as a function of time inwards (start * to end)
@@ -38,9 +38,9 @@ In addition, there are plots for a single beam, either the central compound beam
 
 Processed data products
 ************************
-The Apercal pipeline (see “`Apercal overview and structure<https://www.astron.nl/telescopes/wsrt-apertif/apertif-dr1-documentation/apercal/overview-and-structure/>`_”) calibrates the data and produces final images and cubes per compound beam. All data products described below are for an individual compound beam, of which there are forty per observation. These data products are not primary-beam corrected; primary-beam images are provided separately (see the "`Primary beam response <`" section, specifically “Released primary beam images”, and “User Interfaces”); these may be used for mosaicking or for correction of individual images.
+The Apercal pipeline (see “`Apercal overview and structure <https://www.astron.nl/telescopes/wsrt-apertif/apertif-dr1-documentation/apercal/overview-and-structure/>`_”) calibrates the data and produces final images and cubes per compound beam. All data products described below are for an individual compound beam, of which there are forty per observation. These data products are not primary-beam corrected; primary-beam images are provided separately (see the ":ref:`Primary Beam Response`" section, specifically “:ref:`Released primary beam images`”, and “:ref:`User Interfaces`”); these may be used for mosaicking or for correction of individual images.
 
-Processed data products are ingested back into ALTA on a per-beam basis, and in “Released processed data products” we motivate the choice to release data on a per-beam basis. Note that the release of a beam releases all processed data associated with that beam.
+Processed data products are ingested back into ALTA on a per-beam basis, and in “:ref:`Released processed data products`” we motivate the choice to release data on a per-beam basis. Note that the release of a beam releases all processed data associated with that beam.
 
 An important note is that currently only the upper 150 MHz of the band is processed; thus the processed data products are produced over the range 1280-1430 MHz. Moreover, the first 12.5 MHz of data are flagged due to persistent RFI, therefore the resulting central frequency is 1361.25 MHz. The nominal bandwidth is then 137.5 MHz, but effectively it could be smaller due to additional RFI flagging. The (currently archived) data products are described below:
 
