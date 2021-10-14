@@ -7,11 +7,11 @@ Raw data Products
 ******************
 Raw observational data
 -----------------------
-The raw observational data is recorded in measurement-set (MS) format. A survey field observation consists of forty beams covering the field; with all dishes the size of this dataset is 4.6 TB. A set of calibration scans consists of 40 separate observations taken in succession. For each calibrator scan only one beam contains the calibrator. All other beams not containing the calibrator are discarded. These observations vary in between 3–5 minutes and the total datasize for a complete calibrator scan (all forty beams) is 64-106 GB. The calibrator observations are taken at a higher time resolution than the survey fields (10 vs. 30 seconds) to allow better RFI excision due to their shorter integration time. The raw data are stored in long-term storage at `SurfSARA <https://userinfo.surfsara.nl/>`_ to enable future reprocessing with improvements to the `Apercal pipeline <https://www.astron.nl/telescopes/wsrt-apertif/apertif-dr1-documentation/apercal/overview-and-structure/>`_.
+The raw observational data is recorded in measurement-set (MS) format. A survey field observation consists of forty beams covering the field; with all dishes the size of this dataset is 4.6 TB. A set of calibration scans consists of 40 separate observations taken in succession. For each calibrator scan only one beam contains the calibrator. All other beams not containing the calibrator are discarded. These observations vary in between 3–5 minutes and the total datasize for a complete calibrator scan (all forty beams) is 64-106 GB. The calibrator observations are taken at a higher time resolution than the survey fields (10 vs. 30 seconds) to allow better RFI excision due to their shorter integration time. The raw data are stored in long-term storage at `SurfSARA <https://userinfo.surfsara.nl/>`_ to enable future reprocessing with improvements to the :ref: `Apercal` pipeline.
 
 Inspection plots
 -------------------
-Upon ingest to ALTA, inspection plots showing various views of data quality are created. The majority of these plots show the behavior per compound beam, with different slices of the data to highlight different aspects of quality. Example inspection plots can be found here. These plots are\:
+Upon ingest to ALTA, inspection plots showing various views of data quality are created. The majority of these plots show the behavior per compound beam, with different slices of the data to highlight different aspects of quality. Example inspection plots can be found ` <https://alta.astron.nl/science/inspectionplots/190411002>`_. These plots are\:
 
     * Amplitude(all): Amplitude across all beams, averaged over all parameters
     * Amplitude f(time): Amplitude across all beams, concentric circles as a function of time inwards (start * to end)
@@ -38,7 +38,7 @@ In addition, there are plots for a single beam, either the central compound beam
 
 Processed data products
 ************************
-The Apercal pipeline (see “Apercal overview and structure”) calibrates the data and produces final images and cubes per compound beam. All data products described below are for an individual compound beam, of which there are forty per observation. These data products are not primary-beam corrected; primary-beam images are provided separately (see the "Primary beam response" section, specifically “Released primary beam images”, and “User Interfaces”); these may be used for mosaicking or for correction of individual images.
+The Apercal pipeline (see “`Apercal overview and structure<https://www.astron.nl/telescopes/wsrt-apertif/apertif-dr1-documentation/apercal/overview-and-structure/>`_”) calibrates the data and produces final images and cubes per compound beam. All data products described below are for an individual compound beam, of which there are forty per observation. These data products are not primary-beam corrected; primary-beam images are provided separately (see the "`Primary beam response <`" section, specifically “Released primary beam images”, and “User Interfaces”); these may be used for mosaicking or for correction of individual images.
 
 Processed data products are ingested back into ALTA on a per-beam basis, and in “Released processed data products” we motivate the choice to release data on a per-beam basis. Note that the release of a beam releases all processed data associated with that beam.
 
