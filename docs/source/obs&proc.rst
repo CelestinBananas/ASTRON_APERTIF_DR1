@@ -23,7 +23,7 @@ All raw observational data from the imaging surveys through the first year of su
 
   A view of the processing for medium-deep fields with repeat visits. The observations are ordered in time-order and the color code refers to the same processing as for the figure above.
 
-Notes on the data quality/processing  for specific observations can be found here. :ref:`Notes on specific observations`
+Notes on the data quality/processing  for specific observations can be found at :ref:`Notes on specific observations`.
 
 A machine-readable summary table of these observations can be exported using the VO infrastructure, more details are provided in section “:ref:`User Interfaces`”.
 
