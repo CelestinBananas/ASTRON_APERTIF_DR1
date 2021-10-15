@@ -85,7 +85,7 @@ The code to produce the beam maps is available at: https://github.com/apertif/ap
   :align: center
   :width: 400
   :alt: Relative flux error
-  :name: beams_chan
+  :name: beams_chan2
 
   Beam maps for all 40 apertif beams reconstructed from drift scans. Contour levels are: 0.1, 0.2, 0.4, 0.5, 0.6, 0.8. Red contours highlight the 10% and the 50% sensitivity level. These drift scans were measured in September 2019 and channel 7 corresponds to a frequency of ~ 1.363 GHz.
 
@@ -105,7 +105,15 @@ Beam weights are measured at the start of every imaging observing run and are ty
 
 Beam size change with frequency
 ----------------------------------
-Beam shapes and sizes change across the field of view of Apertif with the central beams being more symmetric and the beams along the edge of the field of view more elongated. :numref:`chann_9` and :numref:`chann_7` show the average beam size (FWHM), and the FWHM along the x and y axis as a function of beam number. :numref:`chann_9` shows the beam size for frequency bin 7 (1.363 GHz) and :numref:`chann_7` shows the same for frequency bin 9 (1.399 GHz).
+Beam shapes and sizes change across the field of view of Apertif with the central beams being more symmetric and the beams along the edge of the field of view more elongated. :numref:`chann_7` and :numref:`chann_9` show the average beam size (FWHM), and the FWHM along the x and y axis as a function of beam number. :numref:`chann_7` shows the beam size for frequency bin 7 (1.363 GHz) and :numref:`chann_9` shows the same for frequency bin 9 (1.399 GHz).
+
+.. figure:: images/190912_chann_7_FWHM-1024x706.png
+  :align: center
+  :width: 400
+  :alt: Relative flux error
+  :name: chann_7
+
+  FWHM as a function of beam number for channel 7 (1.363 GHz). The black line shows the average FWHM when fitting a 2D Gaussian function to the beam maps. The blue line shows the FWHM of the 2D Gaussian along the x-axis (r.a.) and the orange line shows the FWHM along the y-axis (dec). The shape of the CBs is not perfectly Gaussian, but a 2D Gaussian function is a good approximation for the beam shapes within a few percent.
 
 .. figure:: images/190912_chann_9_FWHM-1024x706.png
   :align: center
@@ -113,17 +121,9 @@ Beam shapes and sizes change across the field of view of Apertif with the centra
   :alt: Relative flux error
   :name: chann_9
 
-  FWHM as a function of beam number for channel 7 (1.363 GHz). The black line shows the average FWHM when fitting a 2D Gaussian function to the beam maps. The blue line shows the FWHM of the 2D Gaussian along the x-axis (r.a.) and the orange line shows the FWHM along the y-axis (dec). The shape of the CBs is not perfectly Gaussian, but a 2D Gaussian function is a good approximation for the beam shapes within a few percent.
-
-.. figure:: images/190912_beams_chan_7-1-1024x990.png
-  :align: center
-  :width: 400
-  :alt: Relative flux error
-  :name: chann_7
-
   FWHM as a function of beam number for channel 9 (1.399 GHz). The black line shows the average FWHM when fitting a 2D Gaussian function to the beam maps. The blue line shows the FWHM of the 2D Gaussian along the x-axis (r.a.) and the orange line shows the FWHM along the y-axis (dec).
 
-Beam sizes change linearly with frequency. The frequency dependence is on average: -2.108e-08 · freq [Hz] + 63.47. This is based on fitting a 2D Gaussian to each beam map at each frequency, taking the average FWHM from the 2D Gaussian fit and then fitting a first order polynomial to the FWHM vs. frequency for each bin. The results were then averaged for 14 different drift scan measurements. :numref:`size_freq` shows the average beam size for each 40 beams as a function of frequency bin for a set of drift scans (grey lines). The dashed black line shows the average fitted line to the data. Some of the beams occasionally show non smooth variation with the beam size (for example beam 7, see also in :numref:`chann_9`and :numref:`chann_7`). The cause for this in most cases is due to the effect of RFI in certain frequency bins.
+Beam sizes change linearly with frequency. The frequency dependence is on average: -2.108e-08 · freq [Hz] + 63.47. This is based on fitting a 2D Gaussian to each beam map at each frequency, taking the average FWHM from the 2D Gaussian fit and then fitting a first order polynomial to the FWHM vs. frequency for each bin. The results were then averaged for 14 different drift scan measurements. :numref:`size_freq` shows the average beam size for each 40 beams as a function of frequency bin for a set of drift scans (grey lines). The dashed black line shows the average fitted line to the data. Some of the beams occasionally show non smooth variation with the beam size (for example beam 7, see also in :numref:`chann_7`and :numref:`chann_9`). The cause for this in most cases is due to the effect of RFI in certain frequency bins.
 
 .. figure:: images/190912_size_freq-1024x717.png
   :align: center
