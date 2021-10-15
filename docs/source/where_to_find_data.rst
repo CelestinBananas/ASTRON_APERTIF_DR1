@@ -7,11 +7,11 @@ The Apertif Data Release 1 (Apertif DR1) is hosted on the Apertif Long Term Arch
 
 Introduction
 ****************
-The science-ready data products as described in Overview (see Available Data Products and Released processed data products), are exposed through standard Virtual Observatory protocols to facilitate their access and exploration.
+The science-ready data products as described in :ref:`Available Data Products` and :ref:`Released processed data products` are exposed through standard Virtual Observatory protocols to facilitate their access and exploration.
 
-The Apertif DR1 data is hosted on the Apertif Long Term Archive (ALTA) system. We recommend astronomers to use the VO interfaces described below for data discovery. These interfaces will redirect to ALTA file servers for data access where appropriate.
+The Apertif DR1 data is hosted on the Apertif Long Term Archive (`ALTA <https://alta.astron.nl/>`_) system. We recommend astronomers to use the VO interfaces described below for data discovery. These interfaces will redirect to ALTA file servers for data access where appropriate.
 
-In particular, the protocols offered are the Tabular Access Protocol (TAP), Simple Application Messaging Protocol (SAMP) and the Simple Image Access protocol (SIA). TAP and SAMP enables queries to explore the data in a tabular form using tools such as TOPCAT. TOPCAT is an interactive graphical viewer and editor for tabular data, it enables the interactive exploration of large tables performing several types of plotting, statistics, editing and visualization of tables. SIA enables the rapid display of images and cubes through all sky atlas tools such as ALADIN. ALADIN is an interactive sky atlas allowing the user to visualize digitized astronomical images/cubes and superimpose entries from astronomical catalogues or databases.
+In particular, the protocols offered are the Tabular Access Protocol (`TAP <http://www.ivoa.net/documents/TAP/>`_), Simple Application Messaging Protocol (`SAMP <https://www.ivoa.net/documents/SAMP/>`_) and the Simple Image Access protocol (`SIA <http://www.ivoa.net/documents/SIA/>`_). TAP and SAMP enables queries to explore the data in a tabular form using tools such as ` <http://www.star.bris.ac.uk/~mbt/topcat/>`_. TOPCAT is an interactive graphical viewer and editor for tabular data, it enables the interactive exploration of large tables performing several types of plotting, statistics, editing and visualization of tables. SIA enables the rapid display of images and cubes through all sky atlas tools such as `ALADIN <https://aladin.u-strasbg.fr/>`_. ALADIN is an interactive sky atlas allowing the user to visualize digitized astronomical images/cubes and superimpose entries from astronomical catalogues or databases.
 
 The data published in the VO  can also be accessed using a web browser at https://vo.astron.nl. This web interface provides a page on which all the collections present in the registry are listed, including the published Apertif DR1 data sets (:numref:`col_page`).
 
@@ -57,7 +57,7 @@ In the column Related products another link connects to a page containing a list
 
   Links of ancillary data products related to the target of interest. Click for a bigger image
 
-The columns shown in Figure 3 are the most informative for the astronomers (e.g. position, observing frequency, observing date, quality assessment, format etc), please note that more columns are available but not displayed here. The complete set of columns can be visualized via topcat as described below or using More output fields selection button in the search query. Querying the released data is also possible using e.g. TOPCAT using TAP. Via the TAP protocol, it is possible to query the registry in a more flexible way using an enriched SQL syntax called ADQL. An example is given in :numref:`ADQL_query` : click the link indicated with the red ellipse on the left panel Try ADQL and place your ADQL query on the query form.
+The columns shown in Figure 3 are the most informative for the astronomers (e.g. position, observing frequency, observing date, quality assessment, format etc), please note that more columns are available but not displayed here. The complete set of columns can be visualized via topcat as described below or using More output fields selection button in the search query. Querying the released data is also possible using e.g. TOPCAT using TAP. Via the TAP protocol, it is possible to query the registry in a more flexible way using an enriched SQL syntax called `ADQL <http://www.ivoa.net/documents/ADQL/20180112/PR-ADQL-2.1-20180112.html>`_. An example is given in :numref:`ADQL_query` : click the link indicated with the red ellipse on the left panel Try ADQL and place your ADQL query on the query form.
 
 .. figure:: images/ADQL_query_fig5.png
  :align: center
@@ -153,7 +153,7 @@ Access via ALADIN
 Catalogues
 --------------
 
-The Apertif DR1 VO data collection can also be discovered directly via ALADIN either via simple image access protocol (SIAP) or tabular access protocol (TAP). The examples shown here require the desktop version of ALADIN.
+The Apertif DR1 VO data collection can also be discovered directly via ALADIN either via simple image access protocol (SIAP) or tabular access protocol (TAP). The examples shown here require the desktop version of `ALADIN <https://aladin.u-strasbg.fr/>`_.
 
 Open ALADIN and on the left panel for SIAP: select Others > SIA2 > astron.nl > The VO @ASTRON SIAP Version 2. Alternatively for TAP select Others > TAP > astron.nl > The VO @ASTRON TAP service (:numref:`coll_tap`). A pop-up window will open. Click load, and enter a query using the Server selector (:numref:`server_select`) or TAP access with astron.nl/tap (:numref:`search_tap`) to select the target of interest for SIAP and TAP respectively.
 
@@ -214,11 +214,11 @@ Downloading images or cubes in ALADIN is also possible (see :numref:`im_load_al`
 
 Access to raw and calibrated visibilities
 **********************************************
-Raw observations and calibrated visibilities can be discovered in the data collection as shown in Figure 1, using the ASTRON-VO query form (Figure 2) or via TAP using TOPCAT.
+:ref:`Raw observations <Released observations>` and :ref:`calibrated visibilities <Released processed data products>` can be discovered in the data collection as shown in :numref:`col_page`, using the ASTRON-VO query form (:numref:`query_search`) or via TAP using TOPCAT.
 
 In addition, the query results via ASTRON VO for continuum images, polarization images/cubes, and HI spectral cubes provides a link to ancillary data (:numref:`rel_prod`), including raw and calibrated visibilities.
 
-These data products are stored on tape and not directly accessible for download, but until further notice access can be requested via the helpdesk (:numref:`helpdesk_req`). The request will be processed on a best effort basis. Within the same request also the calibration tables can be made available (see "Available data products").
+These data products are stored on tape and not directly accessible for download, but until further notice access can be requested via the `helpdesk <https://support.astron.nl/sdchelpdesk>`_ (:numref:`helpdesk_req`). The request will be processed on a best effort basis. Within the same request also the calibration tables can be made available (see ":ref:`Available data products`").
 
 .. figure:: images/vis_info_fig17.png
   :align: center
@@ -239,7 +239,7 @@ These data products are stored on tape and not directly accessible for download,
 Primary beam images
 ---------------------
 
-The continuum images, HI spectral cubes and V images and Q&U cubes are not primary beam corrected. Primary-beam images may be used for mosaicking or for correction of individual images. More information about the primary beam images for Apertif, including their derivation, can be found in the "Overview of primary beam shapes for Apertif."  Specifically, "Released primary beam images" describes the primary beam images initially made available as part of this data release. As for other ancillary data products, primary beam images can be found in the query results following the links in the column Related products (:numref:`ancillary_data`) for continuum images, HI spectral cubes or polarization cubes.
+The continuum images, HI spectral cubes and V images and Q&U cubes are not primary beam corrected. Primary-beam images may be used for mosaicking or for correction of individual images. More information about the primary beam images for Apertif, including their derivation, can be found in the ":ref:`Overview of primary beam shapes for Apertif`".  Specifically, ":ref:`Released primary beam images`" describes the primary beam images initially made available as part of this data release. As for other ancillary data products, primary beam images can be found in the query results following the links in the column Related products (:numref:`ancillary_data`) for continuum images, HI spectral cubes or polarization cubes.
 
 .. figure:: images/ancillary-data_fig19.png
   :align: center
@@ -251,7 +251,7 @@ The continuum images, HI spectral cubes and V images and Q&U cubes are not prima
 
 Python access
 ***************
-The data collection and the table content can be accessed directly via python using the pyvo tool. Working directly in python the tables and the data products can be simply queried and outputs can be customized according to the user’s needs, without the involvement of TOPCAT or ALADIN.
+The data collection and the table content can be accessed directly via python using the `pyvo <https://pyvo.readthedocs.io/en/latest/dal/index.html#pyvo-data-access>`_ tool. Working directly in python the tables and the data products can be simply queried and outputs can be customized according to the user’s needs, without the involvement of TOPCAT or ALADIN.
 
 An example of a TAP query and image download can be found in the python script below (it has been tested for python 3.7).  The result of the query can also be plotted using python.
 
