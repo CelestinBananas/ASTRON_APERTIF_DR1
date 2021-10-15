@@ -112,9 +112,9 @@ The table containing all observation / beam combinations that pass continuum val
 
 Released polarization data products
 ************************************
-The polarized data products include a Stokes V multi-frequency synthesis image and Stokes Q&U cubes. The polarized data products are only released if the continuum validation is passed but the polarization products may not pass their own validation (see section "Validation of processed data products: Polarization"). The Stokes V images and Q/U cubes are validated separately, and their validation state is clearly given in the User interfaces.
+The polarized data products include a Stokes V multi-frequency synthesis image and Stokes Q&U cubes. The polarized data products are only released if the continuum validation is passed but the polarization products may not pass their own validation (see section "Validation of processed data products: :ref:`Polarization`"). The Stokes V images and Q/U cubes are validated separately, and their validation state is clearly given in the :ref:`User interfaces`.
 
-A table of all released beams with the line validation status (“G”ood, “O”kay, or “B”ad) for cubes 0-2 (given by the columns "cube?_qual"), plus the metrics used for the line validation (described in HI validation) can be exported using the VO infrastructure, more details are provided in section “User Interfaces”.
+A table of all released beams with the line validation status (“G”ood, “O”kay, or “B”ad) for cubes 0-2 (given by the columns "cube?_qual"), plus the metrics used for the line validation (described in HI validation) can be exported using the VO infrastructure, more details are provided in section “:ref:`User Interfaces`”.
 
 
 .. figure:: images/dr_year1_QU_spring.png
@@ -151,9 +151,9 @@ A table of all released beams with the line validation status (“G”ood, “O�
 
 Released line data products
 *****************************
-The released line data products include four dirty cubes and their associated dirty beam cubes. The three lowest frequency cubes (spectrally averaged by 3 channels) are validated independently, while the highest frequency, non-averaged cube (cube3) is not directly validated but generally follows the quality of the closest cube in frequency (cube2). The details of the validation are in "Validation of processed data products: HI".
+The released line data products include four dirty cubes and their associated dirty beam cubes. The three lowest frequency cubes (spectrally averaged by 3 channels) are validated independently, while the highest frequency, non-averaged cube (cube3) is not directly validated but generally follows the quality of the closest cube in frequency (cube2). The details of the validation are in "Validation of processed data products: :ref:`HI`".
 
-Table of all released beams with the line validation status (“G”ood, “O”kay, “B”ad, or “N”o cube) for cubes 0-2 (cube?_qual)  plus the metrics used for the line validation (described in HI validation) can be exported using the VO infrastructure, more details are provided in section “User Interfaces”.
+Table of all released beams with the line validation status (“G”ood, “O”kay, “B”ad, or “N”o cube) for cubes 0-2 (cube?_qual)  plus the metrics used for the line validation (described in HI validation) can be exported using the VO infrastructure, more details are provided in section “:ref:`User Interfaces`”.
 
 .. figure:: images/dr_year1_HIc2_spring.png
   :align: center
