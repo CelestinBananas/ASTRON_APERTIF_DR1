@@ -19,7 +19,7 @@ The noise values skew to higher values from the median. This is likely because s
 
 Polarization data quality
 #############################
-All processed data products are released based on the continuum validation (see “:ref:'Released processed data products'”). Thus, some polarization images and cubes may be released that do not pass their own validation. However, this is a small number of images/cubes and they may still be useful (see "Validation of processed data products: :ref:`Polarization`" for more details).
+All processed data products are released based on the continuum validation (see “:ref:`Released processed data products`”). Thus, some polarization images and cubes may be released that do not pass their own validation. However, this is a small number of images/cubes and they may still be useful (see "Validation of processed data products: :ref:`Polarization`" for more details).
 
 :numref:`dr_year1_pol_noise` shows the distribution of inner and outer noise for the Stokes V mfs images. Both all released images (3374) and only those that pass validation (3198) are shown. Very few polarization images fail the polarization validation after passing the continuum validation. This is to be expected as the validation criteria are very similar and the continuum and Stokes V mfs images should generally have similar quality to each other. There is no appreciable difference in the noise distribution between all released images and those that pass validation.
 
