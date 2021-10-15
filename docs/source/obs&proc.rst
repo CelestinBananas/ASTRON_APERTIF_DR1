@@ -199,8 +199,8 @@ Table 1 and 2 also include the standard deviation of the flux ratios for each co
 Table 1: Median ratio of Apertif/NVSS integrated flux, standard deviation of flux ratio, and median measurement error of flux ratio over the full Apertif primary beam (to 10% level)
 ::download:`content/Table-1-Median-ratio-of-Apertif-NVSS-integrated-flux.csv`
 
-Table 2: Apertif/NVSS integrated flux, standard deviation of flux ratio, and median measurement error of flux ratio over the inner Apertif primary beam (≥50% level)
-::download:`content/Table-2-Median-ratio-of-Apertif-NVSS-integrated-flux.csv` Median ratio of
+Table 2: Median ratio of Apertif/NVSS integrated flux, standard deviation of flux ratio, and median measurement error of flux ratio over the inner Apertif primary beam (≥50% level)
+::download:`content/Table-2-Median-ratio-of-Apertif-NVSS-integrated-flux.csv`
 
 
 Apercal
@@ -300,11 +300,11 @@ SELFCAL
 
   where :math:`n_σ` is the confidence interval for regarding islands of emission as real. This is usually set to :math:`n_\sigma = 5`. If at any during a CLEAN-cycle this limit is reached, the current cycle is finished and the self-calibration stops.
 
-  In order to guarantee a smooth convergence of the self-calibration skymodel the two additional thresholds :math:`T_{dr}` and Tn set limits for the maximum dynamic range achievable in an image without reconstruction and the adaptation to image artefacts, respectively. The dynamic range threshold within a cycle is defined by the number of the current major cycle m, the initial dynamic range DRi and a factor defining how fast the threshold should increase DR0 such as
+  In order to guarantee a smooth convergence of the self-calibration skymodel the two additional thresholds :math:`T_{dr}` and Tn set limits for the maximum dynamic range achievable in an image without reconstruction and the adaptation to image artefacts, respectively. The dynamic range threshold within a cycle is defined by the number of the current major cycle m, the initial dynamic range :math:`DR_i` and a factor defining how fast the threshold should increase :math:`DR_0` such as
 
   .. math:: T_{dr} = I_{max}  /  (DR_i  * DR_0^m)
 
-  where :math:`I_{max}` is the maximum pixel value in the residual image of the previous cycle. The parameter DRi is dependent on the level of the first major sidelobe in the dirty beam. The ratio between the maximum and this value gives the maximum dynamic range by which an image can be cleaned before another cycle of image reconstruction needs to be performed.
+  where :math:`I_{max}` is the maximum pixel value in the residual image of the previous cycle. The parameter :math:`DR_i` is dependent on the level of the first major sidelobe in the dirty beam. The ratio between the maximum and this value gives the maximum dynamic range by which an image can be cleaned before another cycle of image reconstruction needs to be performed.
 
   The adaption of the threshold for stopping each individual run of the CLEAN algorithm Tn  is given by
 
@@ -344,9 +344,9 @@ LINE
 
   In order to generate image cubes containing only HI-line emission the continuum has to be subtracted. Several different approaches are possible here: the fitting of baselines to the amplitude of the data followed by subtraction, the subtraction of constant fluxes over frequency in the image domain and the direct subtraction of a continuum clean component model from the (u,v)-data. The best performance in terms of time consumption was achieved with the latter method, so that we decided to use this in Apercal. For this subtraction the final clean model of the CONTINUUM module is used.
 
-  Finally the actual images are produced. MIRIAD does not account for the position dependence of sources situated outside of the pointing centre for large fractional bandwidth, if executed in line imaging mode. Therefore, we have to generate an image for each individual frequency and combine the final images into a cube. Since imaging of individual channels is very computing intensive, but also the imaging process for each individual channel is independent from another we optimised this step by implementing an OpenMP support with the python pymp library [#]_.
+  Finally the actual images are produced. MIRIAD does not account for the position dependence of sources situated outside of the pointing centre for large fractional bandwidth, if executed in line imaging mode. Therefore, we have to generate an image for each individual frequency and combine the final images into a cube. Since imaging of individual channels is very computing intensive, but also the imaging process for each individual channel is independent from another we optimised this step by implementing an OpenMP support with the python pymp library [2]_.
 
-  ..[#] https://github.com/classner/pymp
+  ..[2] https://github.com/classner/pymp
 
 POLARISATION
 ------------------
