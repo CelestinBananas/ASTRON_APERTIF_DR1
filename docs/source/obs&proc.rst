@@ -336,7 +336,7 @@ SELFCAL
 
 
 
-CONTINUUM
+CONTINUUM  
 ---------------
   The CONTINUUM module performs two different tasks to generate final deep continuum Stokes I images. First it generates a deep multi-frequency image using the mfclean task in MIRIAD and secondly several individual images spanning narrower frequency ranges over the full bandwidth using the task clean are produced. The purpose of this is to generate an as deep as possible total intensity image with the maximum possible resolution (given by the highest frequency) and in addition derive reliable spectral indices and curvatures for as many sources as possible. In fact multi-frequency cleaning generates these images already, but their values are only reliable in cases of high signal-to-noise ratios. For both imaging steps we use a uniform weighting to acquire the maximum possible resolution on the order of 12’’. Images usually have a size of 3073x3073 pixels with a pixel size of 4 arcseconds, which allows the imaging and cleaning of any sources up to the first sidelobe level of the primary beam response in order to minimise artefacts.
 

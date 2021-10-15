@@ -106,7 +106,7 @@ A summary of all the archived data products and their sizes (per beam and for a 
   Continuum-subtracted dirty line cubes, 	 fits, 	 661 x 661 x 1218, 	 8, 	 320 GB
   Restoring beam cubes, 	 fits, 	 1321 x 1321 x 1218, 	 320, 	 1.28 TB
 
-Validation of data products
+Validation of processed data products
 ###########################
 Continuum
 **************
