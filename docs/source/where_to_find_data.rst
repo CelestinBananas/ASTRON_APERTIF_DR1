@@ -228,13 +228,13 @@ These data products are stored on tape and not directly accessible for download,
 
   Visibility data access page.
 
- .. figure:: images/helpdesk_req_vis_fig18.png
-   :align: center
-   :width: 400
-   :alt: Relative flux error
-   :name: helpdesk_req
+.. figure:: images/helpdesk_req_vis_fig18.png
+ :align: center
+ :width: 400
+ :alt: Relative flux error
+ :name: helpdesk_req
 
-   Astron help center webpage.
+ Astron help center webpage.
 
 Primary beam images
 ---------------------
