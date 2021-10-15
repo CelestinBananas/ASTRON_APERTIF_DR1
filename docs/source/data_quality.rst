@@ -3,9 +3,9 @@ Data Quality
 
 Continuum image quality
 #########################
-All released continuum multi-frequency synthesis images have passed validation, ensuring that they meet the resolution requirements, minimum sensitivity requirements, and have no significant image artifacts, as described in "Validation of processed data products: Continuum".
+All released continuum multi-frequency synthesis images have passed validation, ensuring that they meet the resolution requirements, minimum sensitivity requirements, and have no significant image artifacts, as described in ":ref:`Validation of processed data products: Continuum <cont>`".
 
-The noise values for all released continuum images are shown in :numref:`dq_1`. The left panel shows the noise distribution on the inner part of image (inner hereafter) where many sources are detected. On the right panel the noise of the outer part (outer hereafter), which is typically source-free, is considered (see "Validation of processed data products: Continuum" for more details). The median values (41.4 and 36.1 uJy, respectively) are indicated by the solid lines. The dashed lines and numbers in parentheses indicate the noise values that bound 68% of all values around the median. The median value of the inner noise is slightly larger; this is because the inner part of the image has sources and may still have minor artifacts. The outer noise represents the theoretical best that can be achieved with perfect imaging. The median outer noise is 36.1 microJy/beam and the best achievable (5th percentile) is 29.3 microJy per beam.
+The noise values for all released continuum images are shown in :numref:`dq_1`. The left panel shows the noise distribution on the inner part of image (inner hereafter) where many sources are detected. On the right panel the noise of the outer part (outer hereafter), which is typically source-free, is considered (see "V:ref:`Validation of processed data products: Continuum <cont>`" for more details). The median values (41.4 and 36.1 uJy, respectively) are indicated by the solid lines. The dashed lines and numbers in parentheses indicate the noise values that bound 68% of all values around the median. The median value of the inner noise is slightly larger; this is because the inner part of the image has sources and may still have minor artifacts. The outer noise represents the theoretical best that can be achieved with perfect imaging. The median outer noise is 36.1 microJy/beam and the best achievable (5th percentile) is 29.3 microJy per beam.
 
 The noise values skew to higher values from the median. This is likely because some images may still have minor imaging artifacts. Any issue affecting image quality will only ever increase the noise of an image.
 
@@ -19,7 +19,7 @@ The noise values skew to higher values from the median. This is likely because s
 
 Polarization data quality
 #############################
-All processed data products are released based on the continuum validation (see “Released Processed Data”). Thus, some polarization images and cubes may be released that do not pass their own validation. However, this is a small number of images/cubes and they may still be useful (see "Validation of processed data products: Polarization" for more details).
+All processed data products are released based on the continuum validation (see “:ref:'Released processed data products'”). Thus, some polarization images and cubes may be released that do not pass their own validation. However, this is a small number of images/cubes and they may still be useful (see "Validation of processed data products: :ref:`Polarization`" for more details).
 
 :numref:`dr_year1_pol_noise` shows the distribution of inner and outer noise for the Stokes V mfs images. Both all released images (3374) and only those that pass validation (3198) are shown. Very few polarization images fail the polarization validation after passing the continuum validation. This is to be expected as the validation criteria are very similar and the continuum and Stokes V mfs images should generally have similar quality to each other. There is no appreciable difference in the noise distribution between all released images and those that pass validation.
 
@@ -36,7 +36,7 @@ The same qualitative trends are present as for the continuum noise; the outer no
 Line data Quality
 #####################
 
-Line cubes are released for a beam if the continuum image passes validation; thus some of the line cubes may fail their validation. The line cubes are classified as “good”, “okay” or “bad” depending on the severity of the artefacts in the line data, as detailed in "Validation of processed data products: HI".
+Line cubes are released for a beam if the continuum image passes validation; thus some of the line cubes may fail their validation. The line cubes are classified as “good”, “okay” or “bad” depending on the severity of the artefacts in the line data, as detailed in ":ref:`Validation of processed data products: HI <HI>`".
 
 :numref:`dq_3` shows the distribution of noise for cubes 0, 1 and 2. All released cubes are shown, plus split separately into the good, okay, bad categories. The median noise over all released cubes is 1.62 mJy/bm. The median noise decreases slightly as the cubes increase in frequency; this is consistent with the RFI environment being worse at lower frequencies. As is to be expected, the median noise for good cubes is better than for the okay cubes, which are better than the bad cubes. The best achievable noise (5th percentile, cube 2, only good) is 1.32 mJy/beam.
 
