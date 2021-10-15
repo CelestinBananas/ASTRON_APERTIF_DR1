@@ -3,8 +3,8 @@
 # -- Project information
 
 project = 'ASTRON Apertif DR1'
-copyright = '2021, CHG'
-author = 'C Herbe-George'
+copyright = '2021, ASTRON'
+author = 'Edited by Celestin Herbe-George'
 
 release = '0.1'
 version = '0.1.0'
@@ -35,3 +35,6 @@ html_theme = 'sphinx_rtd_theme'
 html_logo = 'content/Apertif logo.png'
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
+
+# Remove copyright information
+html_show_copyright = False
