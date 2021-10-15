@@ -13,5 +13,4 @@ Contents
    obs&proc
    data_quality
    data_products
-   future
    where_to_find_data
