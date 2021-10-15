@@ -437,13 +437,13 @@ The most significant upgrades to the system are listed below in chronological or
 
 * **Aliasing:**
 
-  The coarse channelization of the data into subbands uses a filter that does not have a perfectly sharp frequency response. This results in some overlap of response between adjacent subbands.  This effect is strongest for channels near a subband edge and also results in a sharp drop in overall response for channels at the subband edges, namely channels 0, 1 and 63 of every subband.  Currently, no correction is done for the aliasing. A brute force approach is used to deal with the suppressed signal at the edges of the subbands -- the low signal channels are flagged.  An offline anti-aliasing filter is under development; when it is available, aliased signals will be removed, and the sharp drop in subband response will be evened out. Until then, we note that aliased signal may occur in the presence of strong HI emission and that 3/64 channels are flagged at full spectral resolution. The impact of this flagging on the spectrally-averaged line cubes is described in the "External Comparison" section of the HI validation.
+  The coarse channelization of the data into subbands uses a filter that does not have a perfectly sharp frequency response. This results in some overlap of response between adjacent subbands.  This effect is strongest for channels near a subband edge and also results in a sharp drop in overall response for channels at the subband edges, namely channels 0, 1 and 63 of every subband.  Currently, no correction is done for the aliasing. A brute force approach is used to deal with the suppressed signal at the edges of the subbands -- the low signal channels are flagged.  An offline anti-aliasing filter is under development; when it is available, aliased signals will be removed, and the sharp drop in subband response will be evened out. Until then, we note that aliased signal may occur in the presence of strong HI emission and that 3/64 channels are flagged at full spectral resolution. The impact of this flagging on the spectrally-averaged line cubes is described in the ":ref:`External Comparison`" section of the HI validation.
 
 
 
 * **Telescope specific issues:**
 
-  Due to operational needs (exceptional maintenance) or because of failures (the above mentioned high residual delay issue, tracking issues, extreme RFIs, etc), one or more telescopes could be missing from an observation. Information about specific observations can be found in "Notes on specific observations".
+  Due to operational needs (exceptional maintenance) or because of failures (the above mentioned high residual delay issue, tracking issues, extreme RFIs, etc), one or more telescopes could be missing from an observation. Information about specific observations can be found in ":ref:`Notes on specific observations`" below.
 
 Notes on specific observations
 ************************************
@@ -452,7 +452,7 @@ This section provides brief notes on observations that had observational or proc
 Observations with no released processed data
 ------------------------------------------------
 
-Some observations have no released processed data associated with them. This can either be because they were processed with the 300 MHz version of the pipeline, which produced lower quality data products, or because the automatic identification of calibrators by AUTOCAL (see "Apercal overview") and subsequent processing failed. In addition, there is a set of observations that were scheduled without RTC & RTD, thus failing to be validated for release since they did not meet the minimum resolution requirement.
+Some observations have no released processed data associated with them. This can either be because they were processed with the 300 MHz version of the pipeline, which produced lower quality data products, or because the automatic identification of calibrators by AUTOCAL (see ":ref:`Apercal overview <Overview and Structure>`") and subsequent processing failed. In addition, there is a set of observations that were scheduled without RTC & RTD, thus failing to be validated for release since they did not meet the minimum resolution requirement.
 
 Early processing
 ^^^^^^^^^^^^^^^^^^^^^
@@ -483,7 +483,7 @@ The following observations have no released processed data products because they
 
 Autocal failures
 ^^^^^^^^^^^^^^^^^^^^
-The following observations have no ingested processed data products because the automatic running of the pipeline failed in their case. Generally this was because of an issue with identifying calibrators. These observations can be manually reprocessed. Access to the raw data can be requested via the helpdesk.
+The following observations have no ingested processed data products because the automatic running of the pipeline failed in their case. Generally this was because of an issue with identifying calibrators. These observations can be manually reprocessed. Access to the raw data can be requested via the `helpdesk <https://support.astron.nl/sdchelpdesk>`_.
 
 
 .. csv-table::  Observations not processed due to failure of automatic calibration identification. Notes: *Observations 028-033 failed. **Go backwards for a pol cal that has C/D (see Obs fails below).
@@ -522,7 +522,7 @@ Partially processed observations
 ------------------------------------
 Calibrator identification issues
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  Two observations, 191207034 and 191207035, do not have processed data products for the first seven beams, as those beams (due to scheduling complications) were not properly identified by AUTOCAL. Given the small number of beams missing, they were not reprocessed. These observations can be manually reprocessed. Access to the raw data can be requested via the helpdesk.
+  Two observations, 191207034 and 191207035, do not have processed data products for the first seven beams, as those beams (due to scheduling complications) were not properly identified by AUTOCAL. Given the small number of beams missing, they were not reprocessed. These observations can be manually reprocessed. Access to the raw data can be requested via the `helpdesk <https://support.astron.nl/sdchelpdesk>`_.
 
 
 Reprocessed observations
@@ -568,4 +568,4 @@ Problems with polarization data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 There is one dataset which has no polarized data products as a polarized calibrator was not able to be observed in the same observational setup. This is ObsID 200309042, field S1042+5324.
 
-In addition, the observation 200505057 was processed without a polarization calibrator. However, since it has no released processed data due to missing RTC and RTD and thus failing resolution requirements, it was not reprocessed. These observations can be manually reprocessed. Access to the raw data can be requested via the helpdesk.
+In addition, the observation 200505057 was processed without a polarization calibrator. However, since it has no released processed data due to missing RTC and RTD and thus failing resolution requirements, it was not reprocessed. These observations can be manually reprocessed. Access to the raw data can be requested via the `helpdesk <https://support.astron.nl/sdchelpdesk>`_.
