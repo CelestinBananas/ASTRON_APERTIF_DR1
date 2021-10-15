@@ -108,6 +108,7 @@ A summary of all the archived data products and their sizes (per beam and for a 
 
 Validation of processed data products
 ###########################
+.. _cont:
 Continuum
 **************
 
