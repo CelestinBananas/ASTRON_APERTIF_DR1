@@ -91,7 +91,7 @@ Released continuum data products
 **********************************
 The main continuum data product is the multi-frequency synthesis continuum image. The resolution is better than 15′′×15′′/sin(δ) (requirement of validation). The median noise value is ~40 uJy/beam.
 
-The table containing all observation / beam combinations that pass continuum validation, along with all the metrics used in continuum validation (described in ”Validation of processed data products: :ref:`Continuum` ”) can be exported using the VO infrastructure, more details are provided in section “:ref:`User Interfaces`".
+The table containing all observation / beam combinations that pass continuum validation, along with all the metrics used in continuum validation (described in ”Validation of processed data products: :ref:`Continuum <Continuum>` ”) can be exported using the VO infrastructure, more details are provided in section “:ref:`User Interfaces`".
 
 .. figure:: images/dr_year1_cont_spring.png
   :align: center
